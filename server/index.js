@@ -3,10 +3,23 @@ const app = express()
 const cors = require('cors')
 require('./scripts/dbConn')
 const User = require('./models/user.model')
+const TwittData = require('./models/twittdata.model')
 const jwt = require('jsonwebtoken')
+
 
 app.use(cors())
 app.use(express.json())
+
+
+
+app.get("/api/twittdata", async (req, res) => {
+
+    const twittdata = await TwittData.find()
+    res.json(twittdata)
+    
+    
+})
+
 
 
 
@@ -54,5 +67,5 @@ app.post("/api/login", async (req, res) => {
 })
 
  app.listen(1337, () =>{
-    console.log("Server started")
+    console.log("Server started on port 1337")
  })
