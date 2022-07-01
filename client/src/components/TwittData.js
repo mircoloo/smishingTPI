@@ -29,16 +29,16 @@ const TwittData = () => {
 
     useEffect(() => {
         fetchData()
-    });
+    }, []);
 
 
     const onLoadMore = () => {
       /* let skip = Skip + Limit
       setSkip(skip) */
       let limit 
-      if(Limit < 21){
-        limit = Limit+3
-      }
+      
+      limit = Limit+3
+    
       
       setLimit(limit)
       let data = {

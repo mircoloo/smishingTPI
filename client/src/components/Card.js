@@ -11,7 +11,7 @@ const Card = ({data}) => {
               <div className="card-body">
             <a className="card-title" href={"https://twitter.com/anyuser/status/" + data.ID} target="_blank" rel="noreferrer">{data.Nickname}<hr></hr> </a> <span>{data.Creation}</span>
 
-            <p className="text-danger text-sm-left font-italic">{data.ImageUrl}</p>
+            <p className="text-danger text-sm-left font-italic">{data.Link}</p>
             <h5 className="text-warning text-center">{data.Organization}</h5>
             <p className="card-text">{data.Comment}</p>
               </div>
