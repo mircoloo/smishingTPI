@@ -9,14 +9,6 @@ const TwittData = () => {
 
 
   const getTweets = () => {
-    /* fetch("/api/twittdata/getAll") 
-    
-          .then(response => {
-            return response.json()
-          })
-          .then(data => {
-            setTwittdata(data)
-          }) */
           fetch("/api/twittdata/getAll", {
             method: 'POST',
             headers: {
@@ -37,7 +29,7 @@ const TwittData = () => {
 
     useEffect(() => {
         fetchData()
-    }, []);
+    });
 
 
     const onLoadMore = () => {

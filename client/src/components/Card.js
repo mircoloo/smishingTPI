@@ -9,7 +9,7 @@ const Card = ({data}) => {
               <img className="card-img-top" src="./missingImage.png" alt="missingImage" style={{height: "18rem"}}></img> 
             } */}
               <div className="card-body">
-            <a className="card-title" href={"https://twitter.com/anyuser/status/" + data.ID} target="_blank">{data.Nickname}<hr></hr> </a> <span>{data.Creation}</span>
+            <a className="card-title" href={"https://twitter.com/anyuser/status/" + data.ID} target="_blank" rel="noreferrer">{data.Nickname}<hr></hr> </a> <span>{data.Creation}</span>
 
             <p className="text-danger text-sm-left font-italic">{data.ImageUrl}</p>
             <h5 className="text-warning text-center">{data.Organization}</h5>
