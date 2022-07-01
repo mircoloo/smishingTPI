@@ -7,18 +7,19 @@ const jwt = require('jsonwebtoken')
 
 
 const twittRoute = require('./routes/twittdata')
-
+const tellRoute = require('./routes/telldata')
 //MIDDELWARES
 app.use(cors())
 app.use(express.json())
 
 //ROUTES
 app.use('/api/twittdata', twittRoute)
+app.use('/api/telldata', tellRoute)
 
 
 
 
-
+app.use('/', (req,res) => res.send("Server up"))
 
 
 
