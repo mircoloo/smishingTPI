@@ -1,6 +1,7 @@
 import React from 'react'
 import TwittData from '../components/TwittData';
 import TellData from '../components/TellData';
+import Carousel from '../components/Carousel';
 const Dashboard =  ()  =>{
 
     return (
@@ -9,6 +10,7 @@ const Dashboard =  ()  =>{
         <TwittData/>
         <hr style={{backgroundColor: "dark"}}></hr>
         <TellData/>
+        
         </>  
         )
 }

@@ -1,6 +1,7 @@
 import {useState, useEffect } from "react";
 import Card from "./Card";
 import Button from "./Button";
+import Carousel from "./Carousel";
 const TwittData = () => {
 
     const [twittdata, setTwittdata] = useState([])
@@ -35,7 +36,7 @@ const TwittData = () => {
     const onLoadMore = () => {
       /* let skip = Skip + Limit
       setSkip(skip) */
-      let limit 
+      let limit = 3
       
       limit = Limit+3
     
@@ -117,6 +118,9 @@ const TwittData = () => {
     <Button text="Load More" color="black" onClick={onLoadMore}/>
     <Button text="Load Less" color="black" onClick={onLoadLess}/>
     </div>
+
+   
+    
         
   )
 }
