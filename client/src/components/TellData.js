@@ -30,11 +30,9 @@ const TellData = () => {
   const onLoadMore = () => {
     /* let skip = Skip + Limit
     setSkip(skip) */
-    let limit = 5
-    if(Limit < 21){
-      limit = Limit+3
-    }
-    
+
+    let limit 
+    limit = Limit+5 
     setLimit(limit)
     let data = {
         skip: 0,
@@ -65,11 +63,9 @@ const TellData = () => {
     /* let skip = Skip + Limit
     setSkip(skip) */
     let limit 
-    if(Limit > 3){
-      limit = Limit-3
-    }
-    
-    setLimit(limit)
+    if(Limit > 5){
+      limit = Limit-5
+      setLimit(limit)
     let data = {
         skip: 0,
         limit: limit,
@@ -92,6 +88,9 @@ const TellData = () => {
         .then(data => {
           setTelldata(data)
         })
+    }
+    
+    
   }
   
 

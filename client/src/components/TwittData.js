@@ -73,9 +73,7 @@ const TwittData = () => {
       let limit 
       if(Limit > 3){
         limit = Limit-3
-      }
-      
-      setLimit(limit)
+        setLimit(limit)
       let data = {
           skip: 0,
           limit: limit,
@@ -98,6 +96,9 @@ const TwittData = () => {
           .then(data => {
             setTwittdata(data)
           })
+      }
+      
+      
     }
     
     
