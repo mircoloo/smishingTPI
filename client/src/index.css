@@ -24,3 +24,12 @@ code {
 hr{
   background-color: white;
 }
+
+.nav-ref{
+  transition: 1s;
+}
+
+
+.nav-ref:hover{
+  transform: scale(1.25);
+}

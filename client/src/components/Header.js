@@ -6,9 +6,9 @@ const Header = ({ title }) => {
     <header className='navbar navbar-dark bg-dark'>
       <h1 style={{color:"white"}}>{title}</h1>
 
-      <Link className="navbar-brand" to="/dashboard">Dashboard</Link>
-      <Link className="navbar-brand" to="/statistics">Statistics</Link>
-      <Link className="navbar-brand" to="/about">About</Link>
+      <Link className="navbar-brand nav-ref" to="/dashboard">Dashboard</Link>
+      <Link className="navbar-brand nav-ref" to="/statistics">Statistics</Link>
+      <Link className="navbar-brand nav-ref" to="/about">About</Link>
     </header>
   )
 }
