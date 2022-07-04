@@ -14,8 +14,6 @@ router.post("/getAll", async (req, res) => {
 
 router.get("/getOne", async (req, res) => {
     const telldata = await TellData.findOne({Number: req.query.number})
-    console.log("Get request")
-    console.log(req.query)
     res.json(telldata) 
     
 })
