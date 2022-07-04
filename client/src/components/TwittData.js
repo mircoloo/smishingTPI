@@ -4,9 +4,9 @@ import Button from "./Button";
 import Carousel from "./Carousel";
 const TwittData = () => {
 
-    const [twittdata, setTwittdata] = useState([])
+  const [twittdata, setTwittdata] = useState([])
     //const [Skip, setSkip] = useState(0)    
-    const [Limit, setLimit] = useState(3) 
+  const [Limit, setLimit] = useState(3) 
 
 
   const getTweets = () => {
@@ -32,15 +32,14 @@ const TwittData = () => {
         fetchData()
     }, []);
 
-
     const onLoadMore = () => {
-      /* let skip = Skip + Limit
-      setSkip(skip) */
+      /* 
+      let skip = Skip + Limit
+      setSkip(skip) 
+      */
       let limit = 3
-      
       limit = Limit+3
-    
-      
+  
       setLimit(limit)
       let data = {
           skip: 0,
@@ -73,9 +72,7 @@ const TwittData = () => {
       let limit 
       if(Limit > 3){
         limit = Limit-3
-      }
-      
-      setLimit(limit)
+        setLimit(limit)
       let data = {
           skip: 0,
           limit: limit,
@@ -83,7 +80,6 @@ const TwittData = () => {
       
 
       fetch("/api/twittdata/getAll", {
-
         method: 'POST',
         mode: 'cors',
         headers: {
@@ -98,6 +94,9 @@ const TwittData = () => {
           .then(data => {
             setTwittdata(data)
           })
+      }
+      
+      
     }
     
     
@@ -115,8 +114,8 @@ const TwittData = () => {
             
         
     </div>
-    <Button text="Load More" color="black" onClick={onLoadMore}/>
-    <Button text="Load Less" color="black" onClick={onLoadLess}/>
+      <Button text="Load More" color="black" onClick={onLoadMore}/>
+      <Button text="Load Less" color="black" onClick={onLoadLess}/>
     </div>
 
    

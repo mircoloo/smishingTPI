@@ -4,7 +4,7 @@ const About = () => {
   return (
     <>
     <h1 className='text-center '>About</h1>
-    <p>Work in progress...</p>
+    <p>First project repo: <a href='https://github.com/mircoloo/internshipProject'>https://github.com/mircoloo/internshipProject</a></p>
     
 
     </>
