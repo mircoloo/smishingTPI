@@ -12,10 +12,11 @@ router.post("/getAll", async (req, res) => {
     
 })
 
-router.post("/postOne", async (req, res) => {
-    const telldata = await TellData.findOne()
-    console.log("Post request telldata")
-    res.json(telldata)
+router.get("/getOne", async (req, res) => {
+    const telldata = await TellData.findOne({Number: req.query.number})
+    console.log("Get request")
+    console.log(req.query)
+    res.json(telldata) 
     
 })
 module.exports = router

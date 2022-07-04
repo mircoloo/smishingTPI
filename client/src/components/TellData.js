@@ -98,8 +98,9 @@ const TellData = () => {
 return (
   <>
     
-    <h2 className="mt-5">TellData</h2>
+    <h2 className="mt-5">TellData <i class="bi bi-search"></i></h2>
     <div className="table-responsive">
+   
     <table className="table mt-2">
     <thead className=" thead-dark">
     <tr>

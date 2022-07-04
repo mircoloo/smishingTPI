@@ -1,9 +1,9 @@
 const mongoose = require('mongoose')
 
 const TellData = new mongoose.Schema({
-    number: {type: String, required: true},
-    comment: {type: String},
-    type: {type: String}
+    Number: {type: String, required: true},
+    Comment: {type: String},
+    Type: {type: String}
 },
 { collection: 'tell-data'}
 )

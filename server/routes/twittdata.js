@@ -18,11 +18,11 @@ router.post("/getAll", async (req, res) => {
     
 })
 
-router.post("/postOne", async (req, res) => {
-    const twittdata = await TwittData.findOne()
-    console.log("Post request")
+router.get("/getOne", async (req, res) => {
+    const twittdata = await TwittData.findOne({})
+    console.log("Get request")
     console.log(req.body)
-    res.json(twittdata)
+    res.json(twittdata) 
     
 })
 module.exports = router
