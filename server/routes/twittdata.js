@@ -21,8 +21,20 @@ router.post("/getAll", async (req, res) => {
 router.get("/getOne", async (req, res) => {
     const twittdata = await TwittData.findOne({})
     console.log("Get request")
-    console.log(req.body)
     res.json(twittdata) 
     
 })
+
+
+
+router.get("/getLinks", async (req, res) => {
+    const links = await TwittData.find({}, {Link:1, _id:0})
+    links.filter((link) => {
+        link != ''
+    })
+    res.json(links) 
+    
+})
+
+
 module.exports = router
