@@ -1,6 +1,4 @@
 #!python3
-
-from gc import collect
 import pymongo
 import telGuarder as tG
 import tellows
