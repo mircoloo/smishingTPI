@@ -31,7 +31,7 @@ router.get("/getLinks", async (req, res) => {
     const links = await TwittData.find({}, {Link:1, _id:0})
     links.filter((link) => {
         link != ''
-    })
+    }) 
     res.json(links) 
     
 })

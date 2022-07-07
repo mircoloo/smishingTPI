@@ -1,7 +1,8 @@
 const express = require('express')
 const app = express()
 const cors = require('cors')
-require('./scripts/dbConn')
+require('./scripts/mongo_connection')
+require('./scripts/sql_connection')
 const jwt = require('jsonwebtoken')
 var bodyParser = require('body-parser')
 
