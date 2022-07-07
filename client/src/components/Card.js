@@ -1,6 +1,7 @@
 const Card = ({data}) => {
   return (
     <div className="card bg-dark " style={{width: "19rem"}}>
+        {console.log("asda", data)}
               {data.ImageUrl !== '' && 
               <a href={data.ImageUrl}><img className="card-img-top" src={data.ImageUrl} alt="missingImage" style={{height: "18rem"}}></img> </a>
               

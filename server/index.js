@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const cors = require('cors')
-//require('./scripts/mongo_connection')
+require('./scripts/mongo_connection')
 //require('./scripts/db')
 const jwt = require('jsonwebtoken')
 var bodyParser = require('body-parser')

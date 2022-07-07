@@ -18,6 +18,15 @@ router.post("/getAll",  async (req, res) => {
 })
 })
 
+router.post("/getAllmongo", async (req, res) => {
+    console.log("body richiesta mongo twittdata req", req.body)
+    let limit = req.body.limit ? parseInt(req.body.limit): 3
+    const twittdata = await TwittData.find().limit(limit)
+    console.log("request twittdata")
+    res.json(twittdata)
+    
+})
+
 router.get("/getAll",  async (req, res) => {
     //let sql = "SELECT link, COUNT(*) AS n FROM twittdata GROUP BY link HAVING CHAR_LENGTH(link)>0;"
     let limit = req.body.limit ? parseInt(req.body.limit): 3

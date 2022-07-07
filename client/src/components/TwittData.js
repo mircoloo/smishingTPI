@@ -19,9 +19,12 @@ const TwittData = () => {
           .then(response => {
             return response.json()
           })
+          
           .then(data => {
             setTwittdata(data)
+            console.log(data)
           }) 
+          
   }
 
     const fetchData = () => {
@@ -47,7 +50,7 @@ const TwittData = () => {
         }
       
 
-      fetch("/api/twittdata/getAll", {
+      fetch("/api/twittdata/getAllmongo", {
 
         method: 'POST',
         mode: 'cors',
@@ -79,7 +82,7 @@ const TwittData = () => {
         }
       
 
-      fetch("/api/twittdata/getAll", {
+      fetch("/api/twittdata/getAllmongo", {
         method: 'POST',
         mode: 'cors',
         headers: {
@@ -91,7 +94,7 @@ const TwittData = () => {
           .then(response => {
             return response.json()
           })
-          .then(console.log)
+          .then((response) => console.log(response))
           .then(data => {
             setTwittdata(data)
           })
@@ -107,11 +110,11 @@ const TwittData = () => {
       <h2 className="mt-5">Twittdata</h2>
       <div className="card-columns">
        
-            { twittdata.map((data) => ( 
-              
-              <Card data={data} key={data.ID}/>
-            
-            ))}
+            { twittdata.map( (data) => {
+                return <Card data={data} key={data.ID}/>
+                
+                //console.log("ciao", data.comment)
+})}
             
         
     </div>
