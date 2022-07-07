@@ -1,7 +1,7 @@
 import {useState, useEffect } from "react";
 import Card from "./Card";
 import Button from "./Button";
-import Carousel from "./Carousel";
+
 const TwittData = () => {
 
   const [twittdata, setTwittdata] = useState([])
@@ -22,7 +22,6 @@ const TwittData = () => {
           
           .then(data => {
             setTwittdata(data)
-            console.log(data)
           }) 
           
   }
@@ -50,7 +49,7 @@ const TwittData = () => {
         }
       
 
-      fetch("/api/twittdata/getAllmongo", {
+      fetch("/api/twittdata/getAll", {
 
         method: 'POST',
         mode: 'cors',
@@ -82,7 +81,7 @@ const TwittData = () => {
         }
       
 
-      fetch("/api/twittdata/getAllmongo", {
+      fetch("/api/twittdata/getAll", {
         method: 'POST',
         mode: 'cors',
         headers: {
@@ -94,7 +93,6 @@ const TwittData = () => {
           .then(response => {
             return response.json()
           })
-          .then((response) => console.log(response))
           .then(data => {
             setTwittdata(data)
           })

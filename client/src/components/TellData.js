@@ -97,7 +97,7 @@ const TellData = () => {
   fetch("/api/telldata/getOne?number=" + numberSearch)
   .then(data => data.json())
   .then(data => { 
-    if(data){setTelldata([data])}
+    if(data[0]){setTelldata([data[0]])}
     else{ setTelldata([]);}
     setLimit(0)  
   })
@@ -130,7 +130,7 @@ return (
   <tbody>
   { telldata.map((data) => ( 
             
-            <TableRow data={data} key={data._id}/>
+            <TableRow data={data} key={data.number}/>
           
           ))}
   </tbody>      

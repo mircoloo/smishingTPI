@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 //app.use(bodyParser.json())
 
 
-app.use('/', (req,res) => res.send("<h1>Server up, but routes are not identified</h1>"))
+app.use('/', (req,res) => res.send("<h1>Error page not found</h1>").status(404))
 /*
 app.post("/api/login", async (req, res) => {
 

@@ -13,47 +13,19 @@ router.post("/getAll",  async (req, res) => {
     const sql = "SELECT * FROM twittdata LIMIT " + limit
     await db.query(sql, (err, result) => {
     if(err) throw(err)
-    console.log("presi dati twitter")
     res.json(result)
 })
 })
-
-router.post("/getAllmongo", async (req, res) => {
-    console.log("body richiesta mongo twittdata req", req.body)
-    let limit = req.body.limit ? parseInt(req.body.limit): 3
-    const twittdata = await TwittData.find().limit(limit)
-    console.log("request twittdata")
-    res.json(twittdata)
-    
-})
-
-router.get("/getAll",  async (req, res) => {
-    //let sql = "SELECT link, COUNT(*) AS n FROM twittdata GROUP BY link HAVING CHAR_LENGTH(link)>0;"
-    let limit = req.body.limit ? parseInt(req.body.limit): 3
-    const sql = "SELECT * FROM twittdata LIMIT " + limit
-    await db.query(sql, (err, result) => {
-    if(err) throw(err)
-    res.json(result)
-})
-})
-
-router.get("/getOne", async (req, res) => {
-    const twittdata = await TwittData.findOne({})
-    console.log("Get request")
-    res.json(twittdata) 
-    
-})
-
 
 
 router.get("/getLinks", async (req, res) => {
-    const links = await TwittData.find({}, {Link:1, _id:0})
-    links.filter((link) => {
-        link != ''
-    }) 
-    res.json(links) 
+    let sql = "SELECT link, COUNT(*) AS n FROM twittdata GROUP BY link HAVING CHAR_LENGTH(link)>0;"
+    await db.query(sql, (err, result) => {
+        if(err) throw(err)
+        res.json(result)
+
     
 })
-
+})
 
 module.exports = router

@@ -1,20 +1,16 @@
 const Card = ({data}) => {
   return (
     <div className="card bg-dark " style={{width: "19rem"}}>
-        {console.log("asda", data)}
               {data.ImageUrl !== '' && 
-              <a href={data.ImageUrl}><img className="card-img-top" src={data.ImageUrl} alt="missingImage" style={{height: "18rem"}}></img> </a>
+              <a href={data.ImageUrl}><img className="card-img-top" src={data.imageurl} alt="missingImage" style={{height: "18rem"}}></img> </a>
               
             }
-            {/* { data.ImageUrl === '' &&
-              <img className="card-img-top" src="./missingImage.png" alt="missingImage" style={{height: "18rem"}}></img> 
-            } */}
               <div className="card-body">
-            <a className="card-title" href={"https://twitter.com/anyuser/status/" + data.ID} target="_blank" rel="noreferrer">{data.Nickname}<hr></hr> </a> <span>{data.Creation}</span>
+            <a className="card-title" href={"https://twitter.com/anyuser/status/" + data.ID} target="_blank" rel="noreferrer">{data.nickname}<hr></hr> </a> <span>{data.Creation}</span>
 
-            <p className="text-danger text-sm-left font-italic">{data.Link}</p>
-            <h5 className="text-warning text-center">{data.Organization}</h5>
-            <p className="card-text">{data.Comment}</p>
+            <p className="text-danger text-sm-left font-italic">{data.link}</p>
+            <h5 className="text-warning text-center">{data.organization}</h5>
+            <p className="card-text">{data.comment}</p>
               </div>
             </div>
   )
