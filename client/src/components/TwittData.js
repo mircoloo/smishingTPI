@@ -91,6 +91,7 @@ const TwittData = () => {
           .then(response => {
             return response.json()
           })
+          .then(console.log)
           .then(data => {
             setTwittdata(data)
           })
