@@ -1,23 +1,16 @@
 const express = require('express');
-var router = express.Router();
-const User = require('../models/user.model')
-var bodyParser = require('body-parser')
-router.use(bodyParser.urlencoded({ extended: false }))
+const router = express.Router();
+const db = require('../scripts/db')
 
-
-router.post("/register", async (req, res) => {
-    console.log(req.body)
-    try{
-        const user = await User.create({
-            name: req.body.name,
-            email:req.body.email,
-            password:req.body.password
-        })
-        res.json({status: 'ok'})
-    }catch(err){ 
-        console.log(err)
-        res.json({status: 'error', error: 'Duplicate email'})
-    }
+router.get('/:id', async (req, res) => {
     
+    let sql = "SELECT * FROM Users WHERE ID = " + req.params.id;
+    await db.query(sql, (err, result) => {
+        if(err) throw(err)
+        res.json(result)
 })
+})
+
+
+
 module.exports = router

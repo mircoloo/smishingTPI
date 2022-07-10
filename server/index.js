@@ -10,47 +10,28 @@ const PORT = 4000
 
 const twittRoute = require('./routes/twittdata')
 const tellRoute = require('./routes/telldata')
-const userRoute = require('./routes/users')
+const authRoute = require('./routes/auth')
+const usersRoute = require('./routes/users')
 //MIDDELWARES
 app.use(cors())
 app.use(express.json())
-
+app.use(bodyParser.urlencoded({
+    extended: true
+  }));
 //ROUTES
 app.use('/api/twittdata', twittRoute)
 app.use('/api/telldata', tellRoute)
-app.use('/api/users', userRoute)
-app.use(bodyParser.urlencoded({ extended: false }))
-//app.use(bodyParser.json())
+app.use('/api/users', usersRoute)
+app.use('/api/auth', authRoute)
+
 
 
 app.use('/', (req,res) => res.send("<h1>Error page not found</h1>").status(404))
-/*
-app.post("/api/login", async (req, res) => {
-
-        const user = await User.findOne({
-            email: req.body.email,
-            password: req.body.password
-        })
 
 
 
-        if(user){
-            
-            const token = jwt.sign(
-            {
-                name: user.name,
-                email: user.email
-            }, 
-            
-            'secret123')
 
-            res.json({status: 'ok', user: token})
-        }else{
-            res.json({status: 'error', user: false})
-        }
-    
-})
-*/
+
  app.listen(PORT, () =>{
     console.log("Server started on port " + PORT)
  })

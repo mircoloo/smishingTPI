@@ -1,6 +1,7 @@
 
 import { useState } from 'react'
-
+import Register from '../Register'
+import './Login.css'
 
 function App() {
 
@@ -9,7 +10,7 @@ function App() {
 
   async function loginUser(event){
     event.preventDefault()
-    const response = await fetch('http://localhost:1337/api/login', {
+    const response = await fetch('/api/auth/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -21,12 +22,11 @@ function App() {
     })
 
     const data = await response.json()
-    
-    if(data.user){
-      alert('Login succesful')
-      window.location.href = '/dashboard'
+    if(data.authenticated){
+      window.location.href = '/organization'
+      window.localStorage.setItem('token', data.token)
     }else{
-      alert('Please check your username and password')
+      
     }
 
 
@@ -34,13 +34,19 @@ function App() {
   }
   return ( 
  
-  <div>
-    <h1>Login</h1>
+  <div className='auth-container'>
+     <div className="section"> <h1>Login</h1>
     <form onSubmit={loginUser}>
       <input  value={email} onChange={(e) => setEmail(e.target.value)} type="email"  placeholder="Email" /> <br />
       <input  value={password} onChange={(e) => setPassword(e.target.value)} type="password"  placeholder="Password" /> <br />
       <input type="submit" value="Login"/> 
+      <button onClick={() => window.localStorage.clear()}>LogOut</button>
     </form>
+    </div>
+   
+    <div className="section"><Register /></div>
+    
+  
     </div>
   );
 }

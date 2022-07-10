@@ -8,7 +8,10 @@ const Header = ({ title }) => {
 
       <Link className="navbar-brand nav-ref" to="/dashboard">Dashboard</Link>
       <Link className="navbar-brand nav-ref" to="/statistics">Statistics</Link>
+      <Link className="navbar-brand nav-ref" to="/organization">Organization</Link>
+      <Link className="navbar-brand nav-ref" to="/login">Login</Link>
       <Link className="navbar-brand nav-ref" to="/about">About</Link>
+      
     </header>
   )
 }

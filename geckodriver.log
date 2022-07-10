@@ -1,0 +1,152 @@
+1657371829494	geckodriver	INFO	Listening on 127.0.0.1:40517
+1657371829983	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "42503" "-no-remote" "-profile" "/tmp/rust_mozprofile1hmEzj"
+*** You are running in headless mode.
+1657371833165	Marionette	INFO	Marionette enabled
+1657371833199	Marionette	INFO	Listening on port 45893
+WebDriver BiDi listening on ws://localhost:42503
+1657371834496	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile1hmEzj/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:42503/devtools/browser/ebd4a844-a8ba-44eb-97cc-0435d158ee78
+JavaScript error: https://adengine.snigelweb.com/tellows.de/4080-1656945722450/adngin.js, line 1: TypeError: r is undefined
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+libEGL warning: DRI2: failed to create dri screen
+JavaScript warning: https://pagead2.googlesyndication.com/bg/x-7aydTzyDGf5pB5jP33n95ytuiMcqG17W4hZ3yQxPE.js line 2 > eval line 370 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/x-7aydTzyDGf5pB5jP33n95ytuiMcqG17W4hZ3yQxPE.js line 2 > eval line 2948 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/x-7aydTzyDGf5pB5jP33n95ytuiMcqG17W4hZ3yQxPE.js line 2 > eval line 3913 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/x-7aydTzyDGf5pB5jP33n95ytuiMcqG17W4hZ3yQxPE.js line 2 > eval line 6809 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1657371867372	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: , line 0: uncaught exception: 7
+1657371877463	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+libEGL warning: DRI2: failed to create dri screen
+JavaScript warning: https://pagead2.googlesyndication.com/bg/edue1xTc5YuiZOhJi4VIA_c20CetZt5T9y7Q3cNnrTA.js line 2 > eval line 3332 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: https://adengine.snigelweb.com/tellows.de/4080-1656945722450/adngin.js, line 1: TypeError: r is undefined
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/x-7aydTzyDGf5pB5jP33n95ytuiMcqG17W4hZ3yQxPE.js line 2 > eval line 875 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/x-7aydTzyDGf5pB5jP33n95ytuiMcqG17W4hZ3yQxPE.js line 2 > eval line 526 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://z.moatads.com/quantcastv2691176990399/moatad.js#moatClientLevel1=p-LPyzjk_5nUS7_&moatClientLevel2=qfm&moatClientLevel3=243417bc-7ed8-4fa5-bb68-95c0c54b7941&moatClientLevel4=0cb39390-a483-450f-b37b-79eafd3c3869&uid=ZRfWJ2UU1X99E4YnZlvUI2USzSRoE9BrYxfQJzEXhHA0FNMguevUYQ==, line 245: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/x-7aydTzyDGf5pB5jP33n95ytuiMcqG17W4hZ3yQxPE.js line 2 > eval line 4249 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: https://adengine.snigelweb.com/tellows.de/4080-1656945722450/adngin.js, line 1: TypeError: r is undefined
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+libEGL warning: DRI2: failed to create dri screen
+JavaScript warning: https://z.moatads.com/quantcastv2691176990399/moatad.js#moatClientLevel1=p-fHFepEQud3Q-h&moatClientLevel2=qfm&moatClientLevel3=2e14cfd3-a00c-4578-aa97-da2dd700eb2d&moatClientLevel4=ab71b3ef-6777-46c1-bb46-794bfbbc92b0&uid=m4GVK5uAw3fShZh0z5iVKsqDjCqa05E_z4XEdJuFlSrMh5ki__YE9Q==, line 245: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+libEGL warning: DRI2: failed to create dri screen
+JavaScript error: https://adengine.snigelweb.com/tellows.de/4080-1656945722450/adngin.js, line 1: TypeError: r is undefined
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+JavaScript warning: https://z.moatads.com/quantcastv2691176990399/moatad.js#moatClientLevel1=p-w80nvHX2R0L0g&moatClientLevel2=qfm&moatClientLevel3=a98c26fe-fec0-4f2d-8b0a-4939d5b2138b&moatClientLevel4=7a4c6dd4-2dc5-4614-a46c-75ac67d149ac&uid=uC20Zbx-sGOlLbow6za3YusprmjuLuB8ui6xY-544Gi5eOBo3CSA-w==, line 245: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/x-7aydTzyDGf5pB5jP33n95ytuiMcqG17W4hZ3yQxPE.js line 2 > eval line 2536 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/x-7aydTzyDGf5pB5jP33n95ytuiMcqG17W4hZ3yQxPE.js line 2 > eval line 5096 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/edue1xTc5YuiZOhJi4VIA_c20CetZt5T9y7Q3cNnrTA.js line 2 > eval line 1227 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: https://adengine.snigelweb.com/tellows.de/4080-1656945722450/adngin.js, line 1: TypeError: r is undefined
+1657371903600	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+libEGL warning: DRI2: failed to create dri screen
+JavaScript warning: https://pagead2.googlesyndication.com/bg/x-7aydTzyDGf5pB5jP33n95ytuiMcqG17W4hZ3yQxPE.js line 2 > eval line 5491 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/x-7aydTzyDGf5pB5jP33n95ytuiMcqG17W4hZ3yQxPE.js line 2 > eval line 5786 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/x-7aydTzyDGf5pB5jP33n95ytuiMcqG17W4hZ3yQxPE.js line 2 > eval line 2820 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/x-7aydTzyDGf5pB5jP33n95ytuiMcqG17W4hZ3yQxPE.js line 2 > eval line 7369 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: https://adengine.snigelweb.com/tellows.de/4080-1656945722450/adngin.js, line 1: TypeError: r is undefined
+1657371910374	Marionette	INFO	Stopped listening on port 45893
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 1996\"  data: no]"
+Sandbox: Unexpected EOF, op 0 flags 00 path /proc/cpuinfo
+1657371918311	geckodriver	INFO	Listening on 127.0.0.1:55485
+1657371918314	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "32975" "-no-remote" "-profile" "/tmp/rust_mozprofileyqBjRn"
+*** You are running in headless mode.
+1657371920358	Marionette	INFO	Marionette enabled
+1657371920362	Marionette	INFO	Listening on port 41521
+WebDriver BiDi listening on ws://localhost:32975
+1657371921008	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileyqBjRn/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:32975/devtools/browser/ec2aaff5-4acd-4b57-b5f5-c7d1d7b3575f
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+libEGL warning: DRI2: failed to create dri screen
+JavaScript warning: https://pagead2.googlesyndication.com/bg/edue1xTc5YuiZOhJi4VIA_c20CetZt5T9y7Q3cNnrTA.js line 2 > eval line 3544 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+libEGL warning: DRI2: failed to create dri screen
+JavaScript warning: https://pagead2.googlesyndication.com/bg/edue1xTc5YuiZOhJi4VIA_c20CetZt5T9y7Q3cNnrTA.js line 2 > eval line 3319 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+libEGL warning: DRI2: failed to create dri screen
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/edue1xTc5YuiZOhJi4VIA_c20CetZt5T9y7Q3cNnrTA.js line 2 > eval line 182 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+libEGL warning: DRI2: failed to create dri screen
+JavaScript warning: https://pagead2.googlesyndication.com/bg/edue1xTc5YuiZOhJi4VIA_c20CetZt5T9y7Q3cNnrTA.js line 2 > eval line 6134 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+libEGL warning: DRI2: failed to create dri screen
+JavaScript warning: https://pagead2.googlesyndication.com/bg/edue1xTc5YuiZOhJi4VIA_c20CetZt5T9y7Q3cNnrTA.js line 2 > eval line 5827 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+libEGL warning: DRI2: failed to create dri screen
+JavaScript warning: https://pagead2.googlesyndication.com/bg/edue1xTc5YuiZOhJi4VIA_c20CetZt5T9y7Q3cNnrTA.js line 2 > eval line 767 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+libEGL warning: DRI2: failed to create dri screen
+JavaScript warning: https://pagead2.googlesyndication.com/bg/edue1xTc5YuiZOhJi4VIA_c20CetZt5T9y7Q3cNnrTA.js line 2 > eval line 4938 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+libEGL warning: DRI2: failed to create dri screen
+JavaScript warning: https://pagead2.googlesyndication.com/bg/edue1xTc5YuiZOhJi4VIA_c20CetZt5T9y7Q3cNnrTA.js line 2 > eval line 7564 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+libEGL warning: DRI2: failed to create dri screen
+JavaScript warning: https://pagead2.googlesyndication.com/bg/edue1xTc5YuiZOhJi4VIA_c20CetZt5T9y7Q3cNnrTA.js line 2 > eval line 5409 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+libEGL warning: DRI2: failed to create dri screen
+JavaScript warning: https://pagead2.googlesyndication.com/bg/edue1xTc5YuiZOhJi4VIA_c20CetZt5T9y7Q3cNnrTA.js line 2 > eval line 468 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+libEGL warning: DRI2: failed to create dri screen
+JavaScript warning: https://pagead2.googlesyndication.com/bg/x-7aydTzyDGf5pB5jP33n95ytuiMcqG17W4hZ3yQxPE.js line 2 > eval line 2114 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://tpc.googlesyndication.com/sodar/Enqz_20U.html, line 11: uncaught exception: 7
+JavaScript warning: https://pagead2.googlesyndication.com/bg/x-7aydTzyDGf5pB5jP33n95ytuiMcqG17W4hZ3yQxPE.js line 2 > eval line 336 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/x-7aydTzyDGf5pB5jP33n95ytuiMcqG17W4hZ3yQxPE.js line 2 > eval line 1846 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+libEGL warning: DRI2: failed to create dri screen
+JavaScript warning: https://pagead2.googlesyndication.com/bg/edue1xTc5YuiZOhJi4VIA_c20CetZt5T9y7Q3cNnrTA.js line 2 > eval line 2728 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+libEGL warning: DRI2: failed to create dri screen
+JavaScript warning: https://pagead2.googlesyndication.com/bg/edue1xTc5YuiZOhJi4VIA_c20CetZt5T9y7Q3cNnrTA.js line 2 > eval line 806 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+libEGL warning: DRI2: failed to create dri screen
+JavaScript warning: https://pagead2.googlesyndication.com/bg/x-7aydTzyDGf5pB5jP33n95ytuiMcqG17W4hZ3yQxPE.js line 2 > eval line 3547 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+libEGL warning: DRI2: failed to create dri screen
+JavaScript warning: https://pagead2.googlesyndication.com/bg/edue1xTc5YuiZOhJi4VIA_c20CetZt5T9y7Q3cNnrTA.js line 2 > eval line 4577 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+libEGL warning: DRI2: failed to create dri screen
+JavaScript warning: https://pagead2.googlesyndication.com/bg/x-7aydTzyDGf5pB5jP33n95ytuiMcqG17W4hZ3yQxPE.js line 2 > eval line 2640 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+libEGL warning: DRI2: failed to create dri screen
+JavaScript warning: https://pagead2.googlesyndication.com/bg/edue1xTc5YuiZOhJi4VIA_c20CetZt5T9y7Q3cNnrTA.js line 2 > eval line 6959 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+libEGL warning: DRI2: failed to create dri screen
+JavaScript warning: https://pagead2.googlesyndication.com/bg/x-7aydTzyDGf5pB5jP33n95ytuiMcqG17W4hZ3yQxPE.js line 2 > eval line 1173 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+libEGL warning: DRI2: failed to create dri screen
+JavaScript warning: https://pagead2.googlesyndication.com/bg/edue1xTc5YuiZOhJi4VIA_c20CetZt5T9y7Q3cNnrTA.js line 2 > eval line 6228 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+libEGL warning: DRI2: failed to create dri screen
+JavaScript warning: https://pagead2.googlesyndication.com/bg/edue1xTc5YuiZOhJi4VIA_c20CetZt5T9y7Q3cNnrTA.js line 2 > eval line 5562 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+libEGL warning: DRI2: failed to create dri screen
+JavaScript warning: https://pagead2.googlesyndication.com/bg/edue1xTc5YuiZOhJi4VIA_c20CetZt5T9y7Q3cNnrTA.js line 2 > eval line 7232 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1657372022807	Marionette	INFO	Stopped listening on port 41521
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+console.error: "Error during quit-application-granted: [Exception... \"File error: Not found\"  nsresult: \"0x80520012 (NS_ERROR_FILE_NOT_FOUND)\"  location: \"JS frame :: resource:///modules/BrowserGlue.jsm :: _onQuitApplicationGranted/tasks< :: line 1996\"  data: no]"

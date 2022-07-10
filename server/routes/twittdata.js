@@ -14,7 +14,7 @@ router.post("/getAll",  async (req, res) => {
     await db.query(sql, (err, result) => {
     if(err) throw(err)
     res.json(result)
-})
+    })
 })
 
 
@@ -23,9 +23,7 @@ router.get("/getLinks", async (req, res) => {
     await db.query(sql, (err, result) => {
         if(err) throw(err)
         res.json(result)
-
-    
-})
+    })
 })
 
 module.exports = router
