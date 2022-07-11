@@ -32,9 +32,9 @@ const Organization = (props) => {
 
     return (
         <>
-        <div>{user.TypeOfUser}</div>
+        <div>{user.yypeofuser}</div>
         <div>
-            <h1>Welcome {user.Email}!</h1>
+            <h1>Welcome {user.email}!</h1>
            
         </div>
         <button onClick={getUserInfo}>Refresh</button>

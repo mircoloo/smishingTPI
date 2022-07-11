@@ -3,7 +3,7 @@ const mysql = require('mysql');
 var db;
 
 const settings = {
-    host: "localhost",
+    host: "localhost",  
     user: "root",
     password: "",
     database: "smishingDB"
@@ -17,7 +17,7 @@ function connectDatabase() {
             if(!err) {
                 console.log('Database is connected!');
             } else {
-                console.log('Error connecting database!');
+                console.log('Error connecting database!', err);
             }
         });
     }

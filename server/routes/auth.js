@@ -30,7 +30,7 @@ router.post('/register' ,async (req, res) => {
                         typeofuser
                     }
 
-    const sql = `INSERT INTO Users (Email, Password, TypeOfUser) VALUES ("${email}", "${password}", "${typeofuser}");`
+    const sql = `INSERT INTO Users (email, password, typeofuser) VALUES ("${email}", "${password}", "${typeofuser}");`
     await db.query(sql, (err, result) => {
     if(err) { res.json({succes: false, error: err})}
         res.json({success: true, data: result, token: "tokentoken"})
@@ -41,7 +41,7 @@ router.post('/register' ,async (req, res) => {
 router.post('/login' ,async (req, res) => {
     const { email, password } = req.body
 
-    const sql = `SELECT * FROM Users WHERE Email= "${email}" AND PASSWORD = "${password}";`
+    const sql = `SELECT * FROM Users WHERE email= "${email}" AND password = "${password}";`
     await db.query(sql, (err, result) => {
     if(err) { 
         res.json({succes: false, error: err})
