@@ -5,12 +5,11 @@ const Dashboard =  ()  =>{
 
     return (
         <>
-        <h1 className='text-center'>Dashboard</h1>
-        <TwittData/>
-        <hr style={{backgroundColor: "dark"}}></hr>
-        <TellData/>
-        
-        </>  
+            <h1 className='text-center'>Dashboard</h1>
+            <TwittData/>
+            <hr style={{backgroundColor: "dark"}}></hr>
+            <TellData/>
+        </>
         )
 }
 
