@@ -109,7 +109,7 @@ const TwittData = () => {
       <div className="card-columns">
        
             { twittdata.map( (data) => {
-                return <Card data={data} key={data.ID}/>
+                return <Card data={data} key={data.id}/>
                 
                 //console.log("ciao", data.comment)
 })}

@@ -24,13 +24,13 @@ mydb = mysql.connector.connect(
   host="localhost",
   user="root",
   password="",
-  database="smishingDB"
+  database="smishingDb"
 )    
 ##########################defining functions to extract informations from the scripts #################
 
 def update_tellows_data():
     mycursor = mydb.cursor()
-    sql = "INSERT INTO teldata VALUES ( %s , %s , %s, %s, %s, %s, %s)"  
+    sql = "INSERT INTO Telldata VALUES ( %s , %s , %s, %s, %s, %s, %s)"  
     df = tellows.extract_data()
     df_list = df.values.tolist()
     values = [(el[0], el[1], el[2], el[3], el[4], el[5], el[6]) for el in df_list]
@@ -41,7 +41,7 @@ def update_tellows_data():
 
 def update_telguarder_data():
     mycursor = mydb.cursor()
-    sql = "INSERT IGNORE teldata VALUES ( %s , %s , %s, %s, %s, %s, %s)"  
+    sql = "INSERT IGNORE Telldata VALUES ( %s , %s , %s, %s, %s, %s, %s)"  
     df = tG.extract_data()
     df_list = df.values.tolist()
     values = [(el[0], el[1], el[2], el[3], el[4], el[5], el[6]) for el in df_list]
@@ -51,7 +51,7 @@ def update_telguarder_data():
 
 def update_twitter_data(number=10):
     mycursor = mydb.cursor()
-    sql = "INSERT IGNORE INTO twittdata VALUES ( %s , %s , %s, %s, %s, %s, %s, %s)" 
+    sql = "INSERT IGNORE INTO Twittdata VALUES ( %s , %s , %s, %s, %s, %s, %s, %s)" 
     df = twitt.extract_data(number)
     df_list = df.values.tolist()
     #df_list.encode('utf-8')

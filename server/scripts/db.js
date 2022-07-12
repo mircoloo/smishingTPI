@@ -6,7 +6,7 @@ const settings = {
     host: "localhost",  
     user: "root",
     password: "",
-    database: "smishingDB"
+    database: "smishingDb"
 }
 
 function connectDatabase() {

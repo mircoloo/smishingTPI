@@ -47,7 +47,7 @@ router.post('/login' ,async (req, res) => {
         res.json({succes: false, error: err})
     }
     if(result[0]){
-        const token = jwt.sign({id: result[0].ID}, 'secretKey', {expiresIn:10})
+        const token = jwt.sign({id: result[0].id}, 'secretKey', {expiresIn:10})
         
         res.status(200).json({authenticated: true, data: result, token})
     }else{
