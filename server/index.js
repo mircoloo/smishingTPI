@@ -11,7 +11,7 @@ const twittRoute = require('./routes/twittdata')
 const tellRoute = require('./routes/telldata')
 const authRoute = require('./routes/auth')
 const usersRoute = require('./routes/users')
-//MIDDELWARES
+//MIDDELWARES 
 app.use(cors())
 app.use(express.json())
 app.use(bodyParser.urlencoded({

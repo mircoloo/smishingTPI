@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const db = require('../scripts/db')
 const jwt = require('jsonwebtoken')
-//Middleware
+//Middleware 
 const authorization = (req, res, next) => {
     const authorized = false
     if(authorized){
