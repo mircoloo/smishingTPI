@@ -5,7 +5,6 @@ import jwt from 'jwt-decode'
 const Organization = (props) => {
     const token = window.localStorage.token
     const decodedToken  = jwt(token)
-
     const [user, setUser] = useState({})
 
 
@@ -32,10 +31,10 @@ const Organization = (props) => {
 
     return (
         <>
-        <div>{user.yypeofuser}</div>
+        <div>{user.typeofuser}</div>
         <div>
             <h1>Welcome {user.email}!</h1>
-           
+            <p>Here all the informations... <b>work in progress</b> </p>
         </div>
         <button onClick={getUserInfo}>Refresh</button>
         </>

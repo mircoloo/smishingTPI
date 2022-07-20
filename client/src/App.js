@@ -7,7 +7,7 @@ import About from './pages/About'
 import Login from './pages/Login/Login'
 import PrivateRoutes from './utils/PrivateRoutes'
 import Organization from './pages/Organization'
-import Register from './pages/Register'
+/* import Register from './pages/Register' */
 
 
 

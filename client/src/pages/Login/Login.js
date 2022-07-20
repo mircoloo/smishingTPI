@@ -1,15 +1,17 @@
 
 import { useState } from 'react'
-import Register from '../Register'
+import Register from './Register'
 import './Login.css'
 
 function App() {
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [error, setError] = useState(false)
 
-  async function loginUser(event){
-    event.preventDefault()
+  const loginUser = async (event) => {
+    event.preventDefault();
+
     const response = await fetch('/api/auth/login', {
     method: 'POST',
     headers: {
@@ -22,9 +24,10 @@ function App() {
     })
 
     const data = await response.json()
-    if(data.authenticated){
+    console.log("Login:", data)
+    if(data.email){
       window.location.href = '/organization'
-      window.localStorage.setItem('token', data.token)
+      localStorage.setItem('token', data.token)
     }else{
       
     }

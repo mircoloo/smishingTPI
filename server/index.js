@@ -25,7 +25,13 @@ app.use('/api/auth', authRoute)
 
 
 
+
+
+
+
 app.use('/', (req,res) => res.send("<h1>Error page not found</h1>").status(404))
+
+
 
 
 
