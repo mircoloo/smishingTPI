@@ -8,7 +8,7 @@ const Organization = (props) => {
     const [user, setUser] = useState({})
 
 
-
+    
     async function getUserInfo(event){
 
         const response = await fetch('/api/users/' + decodedToken.id, {

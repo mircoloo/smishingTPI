@@ -24,12 +24,11 @@ function App() {
     })
 
     const data = await response.json()
-    console.log("Login:", data)
     if(data.email){
       window.location.href = '/organization'
       localStorage.setItem('token', data.token)
     }else{
-      
+      //.....
     }
 
 
