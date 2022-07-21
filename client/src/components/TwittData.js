@@ -1,7 +1,6 @@
-import {useState, useEffect } from "react";
+import React, {useState, useEffect } from "react";
 import Card from "./Card";
 import Button from "./Button";
-
 const TwittData = () => {
 
   const [twittdata, setTwittdata] = useState([])
@@ -9,12 +8,19 @@ const TwittData = () => {
   const [Limit, setLimit] = useState(3) 
 
 
-  const getTweets = () => {
+  const getTweets = (limit) => {
+
+            let data = {
+              skip: 0,
+              limit: limit,
+            }
           fetch("/api/twittdata/getAll", {
             method: 'POST',
             headers: {
           'Content-Type': 'application/json',
           },
+          
+          body: JSON.stringify(data),
           })
           .then(response => {
             return response.json()
@@ -35,36 +41,12 @@ const TwittData = () => {
     }, []);
 
     const onLoadMore = () => {
-      /* 
-      let skip = Skip + Limit
-      setSkip(skip) 
-      */
+      
       let limit = 3
       limit = Limit+3
   
       setLimit(limit)
-      let data = {
-          skip: 0,
-          limit: limit,
-        }
-      
-
-      fetch("/api/twittdata/getAll", {
-
-        method: 'POST',
-        mode: 'cors',
-        headers: {
-      'Content-Type': 'application/json',
-      },
-        body: JSON.stringify(data),
-      }) 
-      
-          .then(response => {
-            return response.json()
-          })
-          .then(data => {
-            setTwittdata(data)
-          })
+      getTweets(limit)
     }
 
 
@@ -75,43 +57,23 @@ const TwittData = () => {
       if(Limit > 3){
         limit = Limit-3
         setLimit(limit)
-      let data = {
-          skip: 0,
-          limit: limit,
-        }
-      
-
-      fetch("/api/twittdata/getAll", {
-        method: 'POST',
-        mode: 'cors',
-        headers: {
-      'Content-Type': 'application/json',
-      },
-        body: JSON.stringify(data),
-      }) 
-      
-          .then(response => {
-            return response.json()
-          })
-          .then(data => {
-            setTwittdata(data)
-          })
-      }
+        getTweets(limit)
       
       
     }
+  }
     
     
 
   return (
+    <>
     <div className="bg-light"> 
       <h2 className="mt-5">Twittdata</h2>
       <div className="card-columns">
        
             { twittdata.map( (data) => {
                 return <Card data={data} key={data.id}/>
-                
-                //console.log("ciao", data.comment)
+
 })}
             
         
@@ -119,8 +81,7 @@ const TwittData = () => {
       <Button text="Load More" color="black" onClick={onLoadMore}/>
       <Button text="Load Less" color="black" onClick={onLoadLess}/>
     </div>
-
-   
+    </>
     
         
   )

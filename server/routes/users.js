@@ -4,11 +4,10 @@ const db = require('../scripts/db')
 const jwt = require('jsonwebtoken')
 
 
-const verify = (req, res, next)  => {
-    const authHeader = req.headers.authorization;
+const verifyJWT = (req, res, next)  => {
+  const authHeader = req.headers['x-access-token']
     if(authHeader){
       const token = authHeader.split(" ")[1];
-  
       jwt.verify(token, process.env.SECRET_JWT_KEY, (err, user) => {
         if(err){
           return res.status(403).json("Token is not valid")
@@ -32,16 +31,21 @@ router.get('/getAll', async (req, res) => {
 })
 
 
-router.get('/:id', async (req, res) => {
-    
-    let sql = "SELECT * FROM Users WHERE id = " + req.params.id;
-    await db.query(sql, (err, result) => {
-        if(err) throw(err)
-        res.json(result)
-})
+router.get('/:id', verifyJWT, async (req, res) => {
+
+    if(req.user.id == req.params.id){
+      let sql = "SELECT * FROM Users WHERE id = " + req.params.id;
+      await db.query(sql, (err, result) => {
+          if(err) throw(err)
+          res.status(200).json(result)
+  })
+  } else{
+      res.status(403).json("You are not allowed to access with this account")
+  }
+
 })
 
-router.delete('/:id', verify, async (req, res) => {
+router.delete('/:id', verifyJWT, async (req, res) => {
     
     if(req.user.id == req.params.id){
         let sql = "DELETE FROM Users WHERE id = " + req.params.id;

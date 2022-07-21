@@ -1,28 +1,44 @@
 import React, { useState, useEffect } from 'react'
-import jwt from 'jwt-decode'
-
+//import jwt from 'jsonwebtoken'
+import jwt from 'jwt-decode' 
+import OrgPage from './OrgPage/OrgPage'
+import UserPage from './UserPage/UserPage'
 
 const Organization = (props) => {
-    const token = window.localStorage.token
-    const decodedToken  = jwt(token)
+
     const [user, setUser] = useState({})
 
-
-    
     async function getUserInfo(event){
 
-        const response = await fetch('/api/users/' + decodedToken.id, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        }
-        })
+        const token = window.localStorage.token
+
+        if(token){
+            const u = jwt(token)
     
-        const data = await response.json()
-        if(data[0]){
-            setUser(data[0])
+            if(!u){
+                localStorage.removeItem('token')
+                window.location.href('/login')
+            }else{
+                const response = await fetch('/api/users/' + u.id, 
+                {
+                    method: 'GET',
+                    headers: {
+                    'Content-Type': 'application/json',
+                    'x-access-token': "Bearer " + token
+                    }
+                })
+            
+                const data = await response.json()
+                if(data[0]){
+                    setUser(data[0])
+                }
+            }
         }
+
+        
       }
+
+
 
     useEffect(() => {
         getUserInfo()
@@ -31,12 +47,11 @@ const Organization = (props) => {
 
     return (
         <>
-        <div>{user.typeofuser}</div>
-        <div>
-            <h1>Welcome {user.email}!</h1>
-            <p>Here all the informations... <b>work in progress</b> </p>
-        </div>
-        <button onClick={getUserInfo}>Refresh</button>
+       
+        {  user.typeofuser === "Organization" ?  
+            <OrgPage user={user} getUserInfo={getUserInfo}/> : <UserPage user={user} getUserInfo={getUserInfo}/>
+        }
+        
         </>
     )
 }

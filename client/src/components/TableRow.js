@@ -1,3 +1,5 @@
+import React  from 'react';
+
 
 const TableRow = (props) => {
   
@@ -6,7 +8,7 @@ const TableRow = (props) => {
   if(parseInt(props.data.score) >= 5 && parseInt(props.data.Score) < 8) scoreColor = "orange"
   if(parseInt(props.data.score) >= 8) scoreColor = "red"
   return (
-
+    <>
     <tr>
       <th scope="row">{props.data.number}</th>
       <th scope="row">{props.data.comment}</th>
@@ -18,6 +20,8 @@ const TableRow = (props) => {
       <th scope="row">{props.data.source}</th>
       <th scope="row">{props.data.organization}</th>
     </tr>
+    </>
+    
   )
 }
 

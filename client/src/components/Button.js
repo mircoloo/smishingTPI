@@ -1,4 +1,4 @@
-
+import React  from 'react';
 import ProtoTypes from 'prop-types'
 
 const Button = ({text, color, onClick}) => {

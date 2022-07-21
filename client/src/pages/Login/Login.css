@@ -12,7 +12,7 @@
 
 .section{
     padding: 1rem;
-    background-color: darkgray;
+    background-color: rgba(123, 122, 122, 1);
     border-radius: .8rem;
 }
 

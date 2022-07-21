@@ -1,4 +1,5 @@
 import {useState, useEffect } from "react";
+import React from 'react';
 import TableRow from "./TableRow";
 import Button from "./Button";
 const TellData = () => {
@@ -8,11 +9,16 @@ const TellData = () => {
   const [Limit, setLimit] = useState(5) 
 
   const fetchData = (limit) => {
+    let data = {
+      skip: 0,
+      limit: limit,
+    }
       fetch("/api/telldata/getAll", {
         method: 'POST',
         headers: {
       'Content-Type': 'application/json',
-      }, 
+      },
+      body: JSON.stringify(data),
       }) 
         .then(response => {
           return response.json()
@@ -25,70 +31,22 @@ const TellData = () => {
   useEffect(() => {
       fetchData()
   }, []);
-
-  
+ 
   const onLoadMore = () => {
     /* let skip = Skip + Limit
     setSkip(skip) */
-
     let limit 
     limit = Limit+5 
     setLimit(limit)
-    let data = {
-        skip: 0,
-        limit: limit,
-      }
-    
-
-    fetch("/api/telldata/getAll", {
-
-      method: 'POST',
-      mode: 'cors',
-      headers: {
-    'Content-Type': 'application/json',
-    },
-      body: JSON.stringify(data),
-    }) 
-    
-        .then(response => {
-          return response.json()
-        })
-        .then(data => {
-          setTelldata(data)
-        })
+    fetchData(limit)
   }
   const onLoadLess = () => {
-    /* let skip = Skip + Limit
-    setSkip(skip) */
     let limit 
     if(Limit > 5){
       limit = Limit-5
       setLimit(limit)
-    let data = {
-        skip: 0,
-        limit: limit,
-      }
-    
-
-    fetch("/api/telldata/getAll", {
-
-      method: 'POST',
-      mode: 'cors',
-      headers: {
-    'Content-Type': 'application/json',
-    },
-      body: JSON.stringify(data),
-    }) 
-    
-        .then(response => {
-          return response.json()
-        })
-        .then(data => {
-          setTelldata(data)
-        })
     }
-    
-    
+    fetchData(limit)
  }
 
  const searchOne = () => {

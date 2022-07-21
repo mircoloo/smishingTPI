@@ -5,24 +5,6 @@ const jwt = require('jsonwebtoken')
 require('dotenv').config();
 //Middleware 
 
-const verify = (req, res, next)  => {
-    const authHeader = req.headers.authorization;
-    if(authHeader){
-      const token = authHeader.split(" ")[1];
-  
-      jwt.verify(token, process.env.SECRET_JWT_KEY, (err, user) => {
-        if(err){
-          return res.status(403).json("Token is not valid")
-        }
-        req.user = user;
-        next();
-      });
-  
-    }else{
-      res.status(401).json("You are not authenticated")
-    }
-  }
-
 router.get('/', async (req, res) => {
     const sql = "SELECT * FROM Users"
     await db.query(sql, (err, result) => {
@@ -34,6 +16,7 @@ router.get('/', async (req, res) => {
 
 router.post('/register' ,async (req, res) => {
     const { email, password, typeofuser } = req.body
+
     const newUser = {
                         email,
                         password,
@@ -42,9 +25,9 @@ router.post('/register' ,async (req, res) => {
 
     const sql = `INSERT INTO Users (email, password, typeofuser) VALUES ("${email}", "${password}", "${typeofuser}");`
     await db.query(sql, (err, result) => {
-    if(err) { res.json({error: err})}
+    if(err) { res.status(500).json({error: err.message, success: false})}
         //const token = jwt.sign({id, typeofuser}, process.env.SECRET_JWT_KEY, {expiresIn: 200})
-        res.json({data: result, token: "tokentoken"})
+        res.json({user: result, success: true})
     });
     
 })
@@ -61,20 +44,14 @@ router.post('/login' ,async (req, res) => {
     if(result[0]){
         //Generate an access token
         let { id, typeofuser, email} = result[0];
-        const token = jwt.sign({id, typeofuser}, process.env.SECRET_JWT_KEY, {expiresIn: 200})
-        //console.log(jwt.decode(token))
-        res.status(203).json({email, typeofuser, token})
+        const token = jwt.sign({id, typeofuser}, process.env.SECRET_JWT_KEY, {expiresIn: 300})
+
+        res.status(200).json({user: {email, typeofuser, token}})
     }else{
         res.status(400).json({error: "Wrong credentials"})
     }
         
     });
-    
-})
-
-
-router.post('/logout', verify ,async (req, res) => {
-    
     
 })
 
