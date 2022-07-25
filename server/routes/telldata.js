@@ -15,20 +15,18 @@ router.post("/getAll",  async (req, res) => {
 router.get("/getOne", async (req, res) => {
     const sql = "SELECT * FROM Telldata WHERE Number =  " + req.query.number + " LIMIT 1"
     await db.query(sql, (err, result) => {
-    res.json(result)
-    
-})
+    res.json(result)  
+    })
 })
 
-
-router.get('/comments/getComments/:number', async (req, res) => {
+router.get('/comments/:number', async (req, res) => {
     
     let { number } = req.params;
-    //console.log(Number.isInteger(number))
-    //if(!number || !Number.isInteger(number)){res.json("Informazioni invalide")}
     let sql = "SELECT  C.id, C.comment, C.nickname FROM Comments as C, Telldata as T WHERE C.telldata_id = T.id AND T.number = " + number;
+    console.log("richiesta")
     await db.query(sql, (err, result) => {
         if(err) throw(err)
+        console.log(result)
         res.json(result)
 })
 })

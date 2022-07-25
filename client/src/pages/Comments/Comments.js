@@ -1,37 +1,47 @@
 
 import React, { useState, useEffect } from 'react'
 import { useParams } from "react-router-dom"
+
+
 const Comments = () => {
 
-    const [comments, setComments] = useState('')
-
-
+  const [comments, setComments] = useState()
     let params = useParams()
 
     const getComments = () => {
-        }
+        
       fetch("/api/telldata/comments/" + params.number, {
         method: 'GET',
         headers: {
-      'Content-Type': 'application/json',
-      },
-      
+          'Content-Type': 'application/json',
+        }
       })
-      .then(response => {
-        return response.json()
+      .catch(err => { 
+        console.log(err)
       })
-      
       .then(data => {
-        setTwittdata(data)
-      }) 
-      
-}
+        return data.json()
+      })    
+      .then((data) => {
+        setComments(data)
+      })    
+    }
 
 
+      useEffect(() => {
+        getComments() 
+      }, [])
 
+  
   return (
-    <div>Comments {params.number}</div>
+    <>
+    <div>Comments</div>
+    {console.log(comments)}
+    </>
+    
   )
 }
 
+
 export default Comments
+

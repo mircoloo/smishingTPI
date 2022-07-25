@@ -29,9 +29,6 @@ function App() {
     }else{
       //.....
     }
-
-
-
   }
   return ( 
  
