@@ -21,4 +21,16 @@ router.get("/getOne", async (req, res) => {
 })
 
 
+router.get('/comments/getComments/:number', async (req, res) => {
+    
+    let { number } = req.params;
+    //console.log(Number.isInteger(number))
+    //if(!number || !Number.isInteger(number)){res.json("Informazioni invalide")}
+    let sql = "SELECT  C.id, C.comment, C.nickname FROM Comments as C, Telldata as T WHERE C.telldata_id = T.id AND T.number = " + number;
+    await db.query(sql, (err, result) => {
+        if(err) throw(err)
+        res.json(result)
+})
+})
+
 module.exports = router

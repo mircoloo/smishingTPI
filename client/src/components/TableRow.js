@@ -10,7 +10,8 @@ const TableRow = (props) => {
   return (
     <>
     <tr>
-      <th scope="row">{props.data.number}</th>
+    <th scope="row">{props.data.id}</th>
+      <th scope="row"><a href={`/comments/${props.data.number}`}>{props.data.number}</a></th>
       <th scope="row">{props.data.comment}</th>
       <th scope="row">{props.data.type}</th>
       <th scope="row">{props.data.researchs}</th>

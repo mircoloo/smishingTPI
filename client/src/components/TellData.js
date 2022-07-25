@@ -76,6 +76,7 @@ return (
     <table className="table mt-2">
     <thead className=" thead-dark">
     <tr>
+    <th scope="col">Id</th>
       <th scope="col">Number</th>
       <th scope="col">Comment</th>
       <th scope="col">Type</th>

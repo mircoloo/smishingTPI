@@ -81,12 +81,10 @@ def extract_data(maxResults: int=10) -> pd.DataFrame:
             for keyword in ORGANIZATIONS:
                 if(keyword in text.upper()):
                     org = keyword
-                    #print(org)
                     break
             doc = nlp(text)
             for entity in doc.ents:
                 if(entity.label_ == 'ORG'):
-                    #print(entity)
                     org += f" {entity}"
 
 

@@ -7,6 +7,7 @@ import About from './pages/About'
 import Login from './pages/Login/Login'
 import PrivateRoutes from './utils/PrivateRoutes'
 import Organization from './pages/Organization'
+import Comments from './pages/Comments/Comments'
 /* import Register from './pages/Register' */
 
 
@@ -30,6 +31,7 @@ const App = () => {
             <Route path="/login" element={ <Login /> }/>
             <Route path="/dashboard" element={ <Dashboard />}/>
             <Route path="/statistics" element={ <Statistics />}/>
+            <Route path="/comments/:number" element={ <Comments />}/>
             
             
         </Routes>

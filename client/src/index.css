@@ -27,9 +27,13 @@ hr{
 
 .nav-ref{
   transition: 1s;
+  margin: .5rem;
 }
+
 
 .nav-ref:hover{
   transform: scale(1.25);
+  
+
 }
 
