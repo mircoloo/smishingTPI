@@ -10,7 +10,7 @@ const Organization = (props) => {
 
     async function getUserInfo(event){
 
-        const token = window.localStorage.token
+        const token = localStorage.token
 
         if(token){
             const u = jwt(token)
