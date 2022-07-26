@@ -38,7 +38,6 @@ const Comments = () => {
     <div>Comments</div>
     {console.log(comments)}
     </>
-    
   )
 }
 
