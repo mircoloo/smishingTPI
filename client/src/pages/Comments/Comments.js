@@ -9,7 +9,7 @@ const Comments = () => {
     const [Number, setNumber] = useState()
     const [user, setUser] = useState()
     let params = useParams()
-
+    let nickname;
     const getComments = () => {
         
       fetch("/api/telldata/comments/" + params.number, 
@@ -36,7 +36,8 @@ const Comments = () => {
       await fetch("/api/telldata/getOne?number=" + params.number)
       .then(data => data.json())
       .then(data => { 
-        if(data[0]){setNumber([data[0]])}
+        if(data[0]){setNumber(data[0])}
+       
       })
       
       
@@ -51,7 +52,7 @@ const Comments = () => {
       
 
       const addComment = async () => {
-        const comment = document.querySelector('#comment-text').value
+        const comment = document.querySelector('#comment-text')
         const comments = document.querySelector('.comments')
         const token = localStorage.token
       if(token){
@@ -69,20 +70,39 @@ const Comments = () => {
                 'x-access-token': "Bearer " + token
                 }
             })
-        
-            const data = await response.json()
-            if(data[0]){
-                setUser(data[0])
-                console.log(data[0])
-            }
+            .then((res) => {return res.json()})
+            .then( (res) => {
+                setUser(res[0])
+                nickname = res[0].email
+             
+            })
+          }
         }
-    }
         
-      }
+        await fetch('/api/telldata/comments', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            "nickname": nickname, 
+            "telldata_id": Number.id,
+            "comment": comment.value
+          })
+          })
+          .then((res) => {return res.json()})
+          .then( (res) => {if(res.inserted){ /* alert("Commento inserito correttamente"); */ window.location.reload()  }
+                          else{ comment.style.backgroundColor = "red";}} )
+      
+          
+          
+    }
+ 
+      
   
   return (
     <>
-    <h1>Commenti per {params.number} </h1>
+    <h1>Commenti per {params.number}</h1>
     <div className='comments'>
     { comments.map((data) => ( 
             
