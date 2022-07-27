@@ -85,9 +85,8 @@ const Comments = () => {
     <h1>Commenti per {params.number} </h1>
     <div className='comments'>
     { comments.map((data) => ( 
-            
             <Comment data={data} key={data.id}/>
-          
+            
           ))}
     </div>
     
