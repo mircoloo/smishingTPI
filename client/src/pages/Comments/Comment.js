@@ -5,7 +5,11 @@ const Comment = ({data}) => {
 
 
   return (
-    <li>{data.nickname + " " + data.comment}</li>
+    <li>
+      <b>{data.nickname}</b> 
+      <br></br> 
+      <p>{data.comment}</p>
+    </li>
   )
 }
 
