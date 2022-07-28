@@ -1,10 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Comment from "./Comment";
+import "./Comments.css";
 import jwt from "jwt-decode";
+import CommentForm from "../../components/CommentForm";
 
 const Comments = () => {
-  const [comments, setComments] = useState([]);
+  const [backendComments, setBackendComments] = useState([]);
+  const rootComment = backendComments.filter(
+    (backendComment) => {return backendComment.parentId === null}
+  );
+  const getReplies = commendId => {
+    return backendComments.filter( (backendComment) => backendComment.parentId === commendId ).sort((a,b) => new Date(a.creationDate).getTime() - new Date(b.creationDate).getTime())
+  }
+
+  
   const [numberInfo, setNumberInfo] = useState({});
   //  const [user, setUser] = useState({})
   let params = useParams();
@@ -17,32 +27,19 @@ const Comments = () => {
         "Content-Type": "application/json",
       },
     })
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        setComments(data);
-      });
+      .then((res) => {return res.json();})
+      .then((data) => {setBackendComments(data);});
   };
 
   const getNumberInfo = async () => {
     await fetch("/api/telldata/getOne?number=" + params.number)
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        if (data[0] !== undefined) {
-          setNumberInfo(data[0]);
-        }
-      });
+      .then((res) => {return res.json();})
+      .then((data) => {setNumberInfo(data[0]);});
   };
 
-  const addComment = async () => {
-    const comment = document.querySelector("#comment-input-field");
+  const addComment = async (text, parentId) => {
 
-    //const allComments = document.querySelector('.comments')
     const token = localStorage.token;
-
     //Get user informations
     if (token) {
       const u = jwt(token);
@@ -57,38 +54,32 @@ const Comments = () => {
             "x-access-token": "Bearer " + token,
           },
         })
-          .then((res) => {
-            return res.json();
-          })
+          .then((res) => {return res.json();})
           .then((data) => {
-            //setUser(res[0])
+            console.log(data[0]);
             nickname = data[0].email;
           });
-      }
-    }
+      } 
 
-    await fetch("/api/telldata/comments", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
+      let data = {
         nickname: nickname,
         telldata_id: numberInfo.id,
-        comment: comment.value,
-      }),
-    })
-      .then((res) => {
-        return res.json();
+        comment: text,
+        parentId: parentId
+      }
+      await fetch("/api/telldata/comments", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
       })
-      .then((data) => {
-        if (data.inserted) {
-          /* alert("Commento inserito correttamente"); */ getComments();
-        } else {
-          comment.style.backgroundColor = "red";
-          console.log(data);
-        }
-      });
+      .then((res) => {return res.json();})
+      .then((data) => {if (data.inserted) {getComments()}})
+      
+    }
+
+    
   };
 
   useEffect(() => {
@@ -97,22 +88,24 @@ const Comments = () => {
   }, []);
 
   return (
-    <>
+    <div className="comments">
       <h1>Commenti per {params.number}</h1>
 
-      {/* {numberInfo ? <h3>{numberInfo.comment}</h3> : <h3>Loading comment</h3>} */}
       <h3>{numberInfo.comment}</h3>
       <div className="comments">
-        {comments.map((data, key) => (
-          <Comment data={data} key={data.id} />
-        ))}
+        <h3 className="comments-title">Comments:</h3>
+        <div className="comment-form-title"> Write comment </div>
+        <CommentForm submitLabel="Write" handleSubmit={addComment}/>
+        <div className="comments-title">
+          <div className="comments-container">
+            {rootComment.map((data, key) => (
+              <Comment data={data} key={data.id} replies={getReplies(data.id)}/>
+            ))}
+          </div>
+          
+        </div>
       </div>
-
-      <div className="add-comment-div">
-        <button onClick={addComment}>Add a comment</button>
-        <input id="comment-input-field" type="text"></input>
-      </div>
-    </>
+    </div>
   );
 };
 

@@ -1470,3 +1470,9 @@ JavaScript warning: https://pagead2.googlesyndication.com/bg/zRsni2KaYpGlbzf8qPi
 JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
 libEGL warning: DRI2: failed to create dri screen
 JavaScript warning: https://pagead2.googlesyndication.com/bg/zRsni2KaYpGlbzf8qPigYhDu91QLoFuK7JLW1IaqgGI.js line 2 > eval line 4918 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+libEGL warning: DRI2: failed to create dri screen
+JavaScript warning: https://pagead2.googlesyndication.com/bg/zRsni2KaYpGlbzf8qPigYhDu91QLoFuK7JLW1IaqgGI.js line 2 > eval line 7020 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+libEGL warning: DRI2: failed to create dri screen
+JavaScript warning: https://pagead2.googlesyndication.com/bg/zRsni2KaYpGlbzf8qPigYhDu91QLoFuK7JLW1IaqgGI.js line 2 > eval line 3478 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.

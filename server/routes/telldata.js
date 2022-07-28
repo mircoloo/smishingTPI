@@ -8,8 +8,7 @@ router.post("/getAll",  async (req, res) => {
     const sql = "SELECT * FROM Telldata LIMIT " + limit
     await db.query(sql, (err, result) => {
     res.json(result)
-})
-    
+    })
 })
 
 router.get("/getOne", async (req, res) => {
@@ -22,7 +21,7 @@ router.get("/getOne", async (req, res) => {
 router.get('/comments/:number', async (req, res) => {
     
     let { number } = req.params;
-    let sql = "SELECT  C.id, C.telldata_id, C.comment, C.nickname FROM Comments as C, Telldata as T WHERE C.telldata_id = T.id AND T.number = " + number;
+    let sql = "SELECT  C.id, C.telldata_id, C.comment, C.nickname, C.likes, C.dislikes, C.creationDate, C.parentId FROM Comments as C, Telldata as T WHERE C.telldata_id = T.id AND T.number = " + number;
     await db.query(sql, (err, result) => {
         if(err) throw(err)
         res.json(result)
