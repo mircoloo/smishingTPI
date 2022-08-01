@@ -5,7 +5,7 @@ const db = require('../scripts/db')
 router.post("/getAll",  async (req, res) => {
     //let sql = "SELECT link, COUNT(*) AS n FROM twittdata GROUP BY link HAVING CHAR_LENGTH(link)>0;"
     let limit = req.body.limit ? parseInt(req.body.limit): 5
-    const sql = "SELECT * FROM Telldata LIMIT " + limit
+    const sql = "SELECT * FROM Telldata ORDER BY id DESC LIMIT " + limit
     await db.query(sql, (err, result) => {
     res.json(result)
     })

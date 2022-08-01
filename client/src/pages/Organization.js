@@ -19,7 +19,7 @@ const Organization = (props) => {
                 localStorage.removeItem('token')
                 window.location.href('/login')
             }else{
-                const response = await fetch('/api/users/' + u.id, 
+                fetch('/api/users/' + u.id, 
                 {
                     method: 'GET',
                     headers: {
@@ -27,11 +27,9 @@ const Organization = (props) => {
                     'x-access-token': "Bearer " + token
                     }
                 })
-            
-                const data = await response.json()
-                if(data[0]){
-                    setUser(data[0])
-                }
+                .then((res) => {return res.json()})
+                .then((data) => {data[0].id ? setUser(data[0]) : localStorage.removeItem('token')})
+                
             }
         }
 
@@ -42,14 +40,17 @@ const Organization = (props) => {
 
     useEffect(() => {
         getUserInfo()
+        
     }, [])
 
 
     return (
         <>
        
-        {  user.typeofuser === "Organization" ?  
-            <OrgPage user={user} getUserInfo={getUserInfo}/> : <UserPage user={user} getUserInfo={getUserInfo}/>
+            {console.log(user)}
+        {
+            user.typeofuser === "Organization" ?  <OrgPage user={user} getUserInfo={getUserInfo}/> : <UserPage user={user} getUserInfo={getUserInfo}/>
+           
         }
         
         </>

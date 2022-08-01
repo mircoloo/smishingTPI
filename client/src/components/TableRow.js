@@ -5,7 +5,7 @@ const TableRow = (props) => {
   
   let scoreColor;
   if(parseInt(props.data.score) < 5) scoreColor = "green"
-  if(parseInt(props.data.score) >= 5 && parseInt(props.data.Score) < 8) scoreColor = "orange"
+  if(parseInt(props.data.score) >= 5 && parseInt(props.data.score) < 8) scoreColor = "orange"
   if(parseInt(props.data.score) >= 8) scoreColor = "red"
   return (
     <>
