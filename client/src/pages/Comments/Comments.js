@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Comment from "./Comment";
 import "./Comments.css";
-import jwt from "jwt-decode";
 import CommentForm from "../../components/CommentForm";
+
+
+const { checkAuth } = require("../../utils/checkAuth");
 
 const Comments = () => {
   const [backendComments, setBackendComments] = useState([]);
@@ -14,11 +16,11 @@ const Comments = () => {
     return backendComments.filter( (backendComment) => backendComment.parentId === commendId ).sort((a,b) => new Date(a.creationDate).getTime() - new Date(b.creationDate).getTime())
   }
 
+
   
   const [numberInfo, setNumberInfo] = useState({});
-  //  const [user, setUser] = useState({})
+  const [user, setUser] = useState({})
   let params = useParams();
-  let nickname;
 
   const getComments = async () => {
     await fetch("/api/telldata/comments/" + params.number, {
@@ -38,31 +40,9 @@ const Comments = () => {
   };
 
   const addComment = async (text, parentId) => {
-
-    const token = localStorage.token;
-    //Get user informations
-    if (token) {
-      const u = jwt(token);
-      if (!u) {
-        localStorage.removeItem("token");
-        window.location.href("/login");
-      } else {
-        await fetch("/api/users/" + u.id, {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            "x-access-token": "Bearer " + token,
-          },
-        })
-          .then((res) => {return res.json();})
-          .then((data) => {
-            console.log(data[0]);
-            nickname = data[0].email;
-          });
-      } 
-
+      
       let data = {
-        nickname: nickname,
+        nickname: user.email,
         telldata_id: numberInfo.id,
         comment: text,
         parentId: parentId
@@ -76,19 +56,19 @@ const Comments = () => {
       })
       .then((res) => {return res.json();})
       .then((data) => {if (data.inserted) {getComments()}})
-      
     }
-
-    
-  };
-
+ 
   useEffect(() => {
+    checkAuth(localStorage.getItem('token')).then((res) => {setUser(res)})
     getComments();
     getNumberInfo();
+    
+    
   }, []);
-
+ 
   return (
-    <div className="comments">
+    
+      <div className="comments">
       <h1>Commenti per {params.number}</h1>
 
       <h3>{numberInfo.comment}</h3>
