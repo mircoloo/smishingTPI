@@ -79,7 +79,7 @@ const Comments = () => {
         <div className="comments-title">
           <div className="comments-container">
             {rootComment.map((data, key) => (
-              <Comment data={data} key={data.id} replies={getReplies(data.id)}/>
+              <Comment data={data} key={data.id} replies={getReplies(data.id)} user={user}/>
             ))}
           </div>
           

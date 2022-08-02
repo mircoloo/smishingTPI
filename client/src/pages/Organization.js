@@ -15,13 +15,9 @@ const Organization = (props) => {
         checkAuth(localStorage.getItem('token')).then((res) => {setUser(res)})
     }, [])
 
-
     return (
         <>
-       
-        {
-            user.typeofuser === "Organization" ?  <OrgPage user={user}/> : <UserPage user={user}/>    
-        }
+        {   user.typeofuser === "Organization" ?  <OrgPage user={user}/> : <UserPage user={user}/>    }
         
         </>
     )
