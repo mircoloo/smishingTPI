@@ -29,15 +29,13 @@ router.get('/comments/:number', async (req, res) => {
     })
 })
 
-router.post('/comments/', async (req, res) => {
-    
-    let { id, nickname, comment} = req.body;
-    if (!id || !nickname || !comment){res.json("Missing informations")}else{
-        let sql = `INSERT INTO Comments (telldata_id, nickname, comment) VALUES (${id}, '${nickname}', '${comment}')`;
-        console.log("richiesta")
+router.post('/comments', async (req, res) => {
+    let { telldata_id, nickname, comment} = req.body;
+    if (!telldata_id || !nickname || !comment){res.json("Missing informations")}else{
+        let sql = `INSERT INTO Comments (telldata_id, nickname, comment) VALUES (${telldata_id}, '${nickname}', '${comment}')`;
         await db.query(sql, (err, result) => {
             if(err) throw(err)
-            res.json(result)
+            res.json({inserted: true})
         })
     }
     

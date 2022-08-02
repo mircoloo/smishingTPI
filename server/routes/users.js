@@ -10,7 +10,7 @@ const verifyJWT = (req, res, next)  => {
       const token = authHeader.split(" ")[1];
       jwt.verify(token, process.env.SECRET_JWT_KEY, (err, user) => {
         if(err){
-          return res.status(403).json("Token is not valid")
+          return res.status(403).json("Token not valid")
         }
         req.user = user;
         next();
@@ -40,7 +40,7 @@ router.get('/:id', verifyJWT, async (req, res) => {
           res.status(200).json(result)
   })
   } else{
-      res.status(403).json("You are not allowed to access with this account")
+      res.status(403).json("sYou are not allowed to access with this account")
   }
 
 })
