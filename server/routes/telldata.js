@@ -56,14 +56,40 @@ router.post('/comments/addLike', async (req, res) => {
 })
 
 router.get('/comments/:id/getLike', async (req, res) => {
-        console.log(req.params)
+        //console.log(req.params)
     
         let sql = `SELECT COUNT(*) AS Count FROM Likes WHERE comment_id = ${req.params.id};` 
         await db.query(sql, (err, result) => {
             if(err) throw(err)
             res.json(result)
         })
+})
+
+
+router.post('/comments/addDislike', async (req, res) => {
+    let { comment_id, user_id } = req.body
     
+    if (!comment_id || !user_id){res.json("Missing informations")}else{
+        let sql = `INSERT INTO Dislikes (comment_id, user_id) select ${comment_id}, ${user_id} WHERE NOT EXISTS (SELECT * FROM Dislikes WHERE comment_id = ${comment_id} AND user_id = ${user_id});` 
+        await db.query(sql, (err, result) => {
+            if(err) throw(err)
+            if(result.affectedRows){
+                res.json({added: true})
+            }else{
+                res.json({added: false})
+            } 
+        })
+    }
+})
+
+router.get('/comments/:id/getDislike', async (req, res) => {
+    //console.log(req.params)
+
+    let sql = `SELECT COUNT(*) AS Count FROM Dislikes WHERE comment_id = ${req.params.id};` 
+    await db.query(sql, (err, result) => {
+        if(err) throw(err)
+        res.json(result)
+    })
 })
     
 

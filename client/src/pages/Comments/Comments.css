@@ -11,3 +11,8 @@
 .feedback{
     cursor: pointer;
 }
+
+.comment{
+    background-color: rgb(255, 171, 3);
+    padding: .8rem;
+}
