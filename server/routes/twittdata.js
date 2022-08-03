@@ -9,7 +9,7 @@ router.use(express.json())
 router.post("/getAll",  async (req, res) => {
     //let sql = "SELECT link, COUNT(*) AS n FROM twittdata GROUP BY link HAVING CHAR_LENGTH(link)>0;"
     let limit = req.body.limit ? parseInt(req.body.limit): 3
-    const sql = "SELECT * FROM Twittdata LIMIT " + limit
+    const sql = "SELECT * FROM Twittdata ORDER BY creation DESC LIMIT " + limit
     await db.query(sql, (err, result) => {
     if(err) throw(err)
     res.json(result)

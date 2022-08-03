@@ -18,20 +18,25 @@ const App = () => {
     return (
         <>
         <Header title={"Smishing TIP"}/>
-        <div className='container bg-light'>
+        <div className='container'>
         
         <Routes>
 
             <Route element={<PrivateRoutes />} >
                 <Route path="/organization" element={<Organization />} />
-                
             </Route>
             <Route path="/about" element={ <About />}/>
             <Route path="/" element={ <Dashboard />}/>
             <Route path="/login" element={ <Login /> }/>
-            <Route path="/dashboard" element={ <Dashboard />}/>
-            <Route path="/statistics" element={ <Statistics />}/>
+            <Route path="/dashboard" element={ <Dashboard />}> 
+
+                
+                
+            
+            </Route>
             <Route path="/comments/:number" element={ <Comments />}/>
+            <Route path="/statistics" element={ <Statistics />}/>
+            <Route path='*' element={<h1>Error 404 page not found</h1>}/>
             
             
         </Routes>
