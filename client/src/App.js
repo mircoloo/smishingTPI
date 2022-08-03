@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Routes} from 'react-router-dom'
-import Dashboard from './pages/Dashboard'
-import Header from './components/Header'
+import Dashboard from './pages/Dashboard/Dashboard'
+import Header from './components/Header/Header'
 import Statistics from './pages/Statistics'
 import About from './pages/About'
 import Login from './pages/Login/Login'
@@ -18,8 +18,7 @@ const App = () => {
     return (
         <>
         <Header title={"Smishing TIP"}/>
-        <div className='container'>
-        
+        <div className='container'> 
         <Routes>
 
             <Route element={<PrivateRoutes />} >

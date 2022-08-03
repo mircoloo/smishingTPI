@@ -4,7 +4,7 @@ import React  from 'react';
 const Header = ({ title }) => {
   
   return (
-    <header className='navbar navbar-dark bg-dark'>
+    <div className='navbar navbar-dark bg-dark'>
       <h1 style={{color:"white"}}>{title}</h1>
 
       <Link className="navbar-brand nav-ref" to="/dashboard">Dashboard</Link>
@@ -13,7 +13,7 @@ const Header = ({ title }) => {
       <Link className="navbar-brand nav-ref" to="/login">Login</Link>
       <Link className="navbar-brand nav-ref" to="/about">About</Link>
       
-    </header>
+    </div>
   )
 }
 export default Header
