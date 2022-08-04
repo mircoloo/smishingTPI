@@ -1,6 +1,7 @@
 import React, {useState, useEffect } from "react";
-import Card from "./Card";
-import Button from "./Button";
+import Card from "../Card";
+import Button from "../Button";
+import './TwittData.css'
 const TwittData = () => {
 
   const [twittdata, setTwittdata] = useState([])
@@ -67,7 +68,7 @@ const TwittData = () => {
 
   return (
     <>
-    <div className="bg-light"> 
+    <div className="twittdata-div"> 
       <h2 className="mt-5">Twittdata</h2>
       <div className="card-columns">
        
@@ -76,7 +77,6 @@ const TwittData = () => {
 
 })}
             
-        
     </div>
       <Button text="Load More" color="black" onClick={onLoadMore}/>
       <Button text="Load Less" color="black" onClick={onLoadLess}/>

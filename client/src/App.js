@@ -8,6 +8,7 @@ import Login from './pages/Login/Login'
 import PrivateRoutes from './utils/PrivateRoutes'
 import Organization from './pages/Organization'
 import Comments from './pages/Comments/Comments'
+import './App.css'
 /* import Register from './pages/Register' */
 
 
@@ -17,10 +18,10 @@ const App = () => {
 
     return (
         <>
-        <Header title={"Smishing TIP"}/>
-        <div className='container'> 
+        <div className='container'>
+            <Header title={"Smishing TIP"}/>
+     
         <Routes>
-
             <Route element={<PrivateRoutes />} >
                 <Route path="/organization" element={<Organization />} />
             </Route>

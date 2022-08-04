@@ -4,15 +4,23 @@ import React  from 'react';
 const Header = ({ title }) => {
   
   return (
-    <div className='navbar navbar-dark bg-dark'>
-      <h1 style={{color:"white"}}>{title}</h1>
-
-      <Link className="navbar-brand nav-ref" to="/dashboard">Dashboard</Link>
-      <Link className="navbar-brand nav-ref" to="/statistics">Statistics</Link>
-      <Link className="navbar-brand nav-ref" to="/organization">Organization</Link>
-      <Link className="navbar-brand nav-ref" to="/login">Login</Link>
-      <Link className="navbar-brand nav-ref" to="/about">About</Link>
+    <div className='navbar'>
+      <header>{title}</header>
+      <div className="nav-refs">
+        <ul>
+          <li><Link className="nav-ref" to="/dashboard"><i className="fa fa-cloud"></i>Dashboard</Link></li>
+          <li><Link className="nav-ref" to="/statistics">Statistics</Link></li>
+          <li><Link className="nav-ref" to="/organization">Organization</Link></li>
+          <li><Link className="nav-ref" to="/login">Login</Link></li>
+          <li><Link className="nav-ref" to="/about">About</Link></li>
+        </ul>
       
+      
+      
+      
+      
+      </div>
+
     </div>
   )
 }
