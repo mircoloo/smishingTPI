@@ -7,7 +7,7 @@ const Dashboard =  ()  =>{
     return (
         <>  
         <div className='dashboard-page'>
-{/* <div className='spacer layer1'></div> */}
+{/*<div className='spacer layer1'></div> */}
 <h1 className='text-center'>Dashboard</h1>
             <TwittData/>
            

@@ -43,7 +43,7 @@ function App({setShowRegister}) {
     <h1>Register</h1>
     <form onSubmit={registerUser}>
     
-      <input type="radio" name='type-acc' value="User" onClick={(e) => setTypeofuser(e.target.value)}/><label htmlFor="html">User</label> <br />
+      <input type="radio" name='type-acc' value="User" defaultChecked onClick={(e) => setTypeofuser(e.target.value)}/><label htmlFor="html">User</label> <br />
     <input type="radio"  value="Organization"   name='type-acc' onClick={(e) => setTypeofuser(e.target.value)}/><label htmlFor="html">Organization</label> <br />
       
     

@@ -1,5 +1,5 @@
 import React, {useState, useEffect } from "react";
-import Card from "../Card";
+import Card from "../Card/Card";
 import Button from "../Button";
 import './TwittData.css'
 const TwittData = () => {
@@ -70,7 +70,7 @@ const TwittData = () => {
     <>
     <div className="twittdata-div"> 
       <h2 className="mt-5">Twittdata</h2>
-      <div className="card-columns">
+      <div className="cards">
        
             { twittdata.map( (data) => {
                 return <Card data={data} key={data.id}/>
@@ -78,8 +78,8 @@ const TwittData = () => {
 })}
             
     </div>
-      <Button text="Load More" color="black" onClick={onLoadMore}/>
-      <Button text="Load Less" color="black" onClick={onLoadLess}/>
+      <Button text="Load More" onClick={onLoadMore}/>
+      <Button text="Load Less" onClick={onLoadLess}/>
     </div>
     </>
     
