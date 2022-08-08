@@ -17,7 +17,7 @@ nlp = spacy.load('it_core_news_lg')
 
 #number of maxResults from the query (min:10 - max:100)
 MAX_RESULTS = 15
-ORGANIZATIONS = ['UNICREDIT', 'POSTEID','POSTEINFO', 'AMAZON']
+ORGANIZATIONS = ['UNICREDIT', 'POSTEID','POSTEINFO', 'AMAZON', 'INTESA SANPAOLO', 'POSTE ITALIANE']
 #DATAFRAME PRINTING OPTION 
 pd.set_option('display.max_rows', None)
 pd.set_option('display.max_columns', None)

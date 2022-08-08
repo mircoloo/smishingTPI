@@ -1,0 +1,11 @@
+.telldata-thead{
+    background-color: black;
+    color: white;
+    border-radius: .8rem;
+}
+
+
+.telldata-search-bar{
+    display: flex;
+    justify-content: space-between;
+}

@@ -64,8 +64,8 @@ def update_twitter_data(number=10):
 
 if __name__ == '__main__':
     print("Updating data...")
-    #update_tellows_data()
+    update_tellows_data()
     update_twitter_data(100)
-    #update_telguarder_data()
+    update_telguarder_data()
     print("Update finished")
     
