@@ -18,10 +18,11 @@ const App = () => {
 
     return (
         <>
-        <div className='container'>
-            <Header title={"Smishing TIP"}/>
-     
-        <Routes>
+        <div className='wrapper'>
+            
+            <Header />
+            <div className='main'>
+            <Routes>
             <Route element={<PrivateRoutes />} >
                 <Route path="/organization" element={<Organization />} />
             </Route>
@@ -29,10 +30,6 @@ const App = () => {
             <Route path="/" element={ <Dashboard />}/>
             <Route path="/login" element={ <Login /> }/>
             <Route path="/dashboard" element={ <Dashboard />}> 
-
-                
-                
-            
             </Route>
             <Route path="/comments/:number" element={ <Comments />}/>
             <Route path="/statistics" element={ <Statistics />}/>
@@ -40,6 +37,8 @@ const App = () => {
             
             
         </Routes>
+            </div>
+        
         </div>
         </>
         

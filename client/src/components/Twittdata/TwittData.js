@@ -69,7 +69,7 @@ const TwittData = () => {
   return (
     <>
     <div className="twittdata-div"> 
-      <h2 className="mt-5">Twittdata</h2>
+      <h2 className="section-title">Twittdata</h2>
       <div className="cards">
        
             { twittdata.map( (data) => {
@@ -78,8 +78,11 @@ const TwittData = () => {
 })}
             
     </div>
+      <div className="load-btns">
       <Button text="Load More" onClick={onLoadMore}/>
       <Button text="Load Less" onClick={onLoadLess}/>
+      </div>
+      
     </div>
     </>
     

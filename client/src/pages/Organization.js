@@ -16,10 +16,11 @@ const Organization = (props) => {
     }, [])
 
     return (
-        <>
+        <div className='page'>
+            <h1 className='page-title'></h1>
         {   user.typeofuser === "Organization" ?  <OrgPage user={user}/> : <UserPage user={user}/>    }
         
-        </>
+        </div>
     )
 }
 

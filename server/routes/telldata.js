@@ -18,6 +18,15 @@ router.get("/getOne", async (req, res) => {
     })
 })
 
+router.post("/getKeyWords", async (req, res) => {
+    const { keyWords } = req.body 
+    const sql = `SELECT * FROM Telldata WHERE Comment LIKE '%${keyWords}%';`
+    await db.query(sql, (err, result) => {
+    res.json(result)  
+    })
+})
+
+
 router.get('/comments/:number', async (req, res) => {
     
     let { number } = req.params;

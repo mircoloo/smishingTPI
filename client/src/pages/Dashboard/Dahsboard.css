@@ -1,13 +1,39 @@
+/* :root{
+    --body-color: #2C3333;
+    --secondary-color: #395B64;
+    --third-color: #A5C9CA;
+    --quarter-color: #E7F6F2;
+} */
 
 
-.spacer{
-    aspect-ratio: 16/9;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+.section-title{
+    color: antiquewhite;        
+    padding: .6rem 0;
+    font-weight: bolder;
+    font-size:3rem;
+    text-align: center;
 }
 
-.layer1{
-    background-image: url('./layered-waves-haikei.svg');
+.load-btns{
+    display: flex;
+    justify-content: space-around;
 }
+
+
+.load-btns button{
+    transition: .3s ;
+    color: var(--quarter-color);
+    font-weight: bold;
+    margin: .5rem;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border: none;
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    padding: .5em 1em;
+    border-radius: .5em;
+}
+
+.load-btns button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transform: scale(1.05);
+  }

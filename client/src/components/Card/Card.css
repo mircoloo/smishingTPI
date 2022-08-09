@@ -3,14 +3,33 @@
     padding: 0;
 }
 
+
 .card{
-    background: black;
+    background: var(--secondary-color);
     border-radius: .8rem;
-    max-width: 27%;
+    max-width: 90%;
+    width: 25%;
     /* max-height: 500px; */
     transition: .35s;
     margin: .5em;
-    padding: 1rem
+    padding: .7rem
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transform: scale(1.02);
+  }
+
+
+.card *:not(hr){
+    padding: .3rem .1rem;
+}
+
+.card-top{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    vertical-align: middle;
 }
 
 .card-body{
@@ -21,6 +40,7 @@
     border-radius: .8rem;
     max-width: 100%;
     max-height: 100%;
+    margin: 0;
 }
 
 .card-nickname{
@@ -32,9 +52,17 @@
     
 }
 
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
+.card-organization{
+    font-style: italic;
+    background-color: rgba(231, 235, 14, 0.4);
+    border-radius:  .2rem;
+    text-align: center;
+}
+
+.card-comment{
+    
+}
+
 
 
 

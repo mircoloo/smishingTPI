@@ -40,7 +40,7 @@ function App({setShowRegister}) {
   return ( 
  
   <div>
-    <h1>Register</h1>
+    <h1 className='page-title'>Register</h1>
     <form onSubmit={registerUser}>
     
       <input type="radio" name='type-acc' value="User" defaultChecked onClick={(e) => setTypeofuser(e.target.value)}/><label htmlFor="html">User</label> <br />

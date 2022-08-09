@@ -1,4 +1,97 @@
-.container{
+/* :root{
+    --body-color: #2C3333;
+    --secondary-color: #395B64;
+    --third-color: #A5C9CA;
+    --quarter-color: #E7F6F2;
+} */
+
+:root{
+  --body-color: #6096ba;
+  --secondary-color: #274c77;
+  --third-color: #e7ecef;
+  --quarter-color: #a3cef1;
+}
+
+.wrapper{
     display: flex;
+    justify-content: space-between;
+}
+
+.main{
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+
+.page{
+   /*  background-color: red */
+   position: absolute;
+}
+
+.page-title{
+    width: 100%;
+    color: var(--third-color);
+    margin: 20px 0;
     
 }
+
+.flip {
+    transform: rotate(-180deg);
+}
+
+.table .table-row {
+    background-color: var(--third-color);
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+  }  
+  
+  
+
+.table li {
+    border-radius: 3px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+
+.table .table-header {
+    background-color: #95A5A6;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  
+}
+
+
+/* ================Media screen responsive==================== */
+
+
+@media screen and (max-width: 700px) {
+  .img-logo{
+    display: none;
+  }
+  .nav {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  nav-ref{
+    flex-direction: row;
+  }
+  .wrapper{
+    flex-direction: column;
+  }
+  div.main {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .twittdata-div .cards{
+    flex-direction: column;
+  }
+  .twittdata-div .cards .card{
+    width: 300px;
+  }
+}
+
+  
