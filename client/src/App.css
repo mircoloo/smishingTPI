@@ -1,0 +1,48 @@
+:root{
+    --body-color: #2C3333;
+    --secondary-color: #395B64;
+    --third-color: #A5C9CA;
+    --quarter-color: #E7F6F2;
+}
+
+
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main{
+    position: absolute;
+    left: 200px;
+}
+
+.page{
+   /*  background-color: red */
+}
+
+.page-title{
+    color: var(--third-color);
+}
+
+.flip {
+    transform: rotate(-180deg);
+}
+
+
+/* ================Media screen responsive==================== */
+
+
+@media screen and (max-width: 992px) {
+    body {
+      background-color: blue;
+    }
+  }
+  
+  /* On screens that are 600px or less, set the background color to olive */
+  @media screen and (max-width: 600px) {
+    body {
+      background-color: olive;
+    }
+  }
+
+  

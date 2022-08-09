@@ -8,6 +8,7 @@ import Login from './pages/Login/Login'
 import PrivateRoutes from './utils/PrivateRoutes'
 import Organization from './pages/Organization'
 import Comments from './pages/Comments/Comments'
+import './App.css'
 /* import Register from './pages/Register' */
 
 
@@ -17,10 +18,12 @@ const App = () => {
 
     return (
         <>
-        <Header title={"Smishing TIP"}/>
-        <div className='container'> 
-        <Routes>
-
+        <div className='wrapper'>
+            <div className='header'>
+                <Header />
+            </div>
+            <div className='main'>
+            <Routes>
             <Route element={<PrivateRoutes />} >
                 <Route path="/organization" element={<Organization />} />
             </Route>
@@ -28,10 +31,6 @@ const App = () => {
             <Route path="/" element={ <Dashboard />}/>
             <Route path="/login" element={ <Login /> }/>
             <Route path="/dashboard" element={ <Dashboard />}> 
-
-                
-                
-            
             </Route>
             <Route path="/comments/:number" element={ <Comments />}/>
             <Route path="/statistics" element={ <Statistics />}/>
@@ -39,6 +38,8 @@ const App = () => {
             
             
         </Routes>
+            </div>
+        
         </div>
         </>
         

@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
 
 router.post('/register' ,async (req, res) => {
     const { email, password, typeofuser } = req.body
-
+    
     const newUser = {
                         email,
                         password,

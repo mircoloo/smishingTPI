@@ -68,47 +68,50 @@ const TellData = () => {
 return (
   <>
     
+    <div className="telldata-div">
     <h2 className="mt-5">TellData<i className="bi bi-search"></i></h2>
 
-    <div className="telldata-search-bar">
-      <div>
-      <input id="telldata-search" placeholder="Search a number"></input><button className="bg-light" onClick={searchOne}>Find</button>
-      </div>
-      <div>
-      <input id="telldata-search" placeholder="Search a company"></input><button className="bg-light" onClick={searchOne}>Find</button>
-      </div>
-      
-    </div>
-    
-    
-    <div className="table">
-    
-    <table className="table">
-    <thead className="telldata-thead">
-    <tr>
-    <th scope="col">Id</th>
-      <th scope="col">Number</th>
-      <th scope="col">Comment</th>
-      <th scope="col">Type</th>
-      <th scope="col">Researchs</th>
-      <th scope="col">Score</th>
-      <th scope="col">Source</th>
-      <th scope="col">Organization</th>
-    </tr>
-  </thead>
-  <tbody>
-  { telldata.map((data) => ( 
-            
-            <TableRow data={data} key={data.number}/>
-          
-          ))}
-  </tbody>      
-  </table>
+<div className="telldata-search-bar">
+  <div>
+  <input id="telldata-search" placeholder="Search a number"></input><button className="bg-light" onClick={searchOne}>Find</button>
   </div>
   <div>
-    <Button text="Load More" color="black" onClick={onLoadMore}/>
-    <Button text="Load Less" color="black" onClick={onLoadLess}/>
+  <input id="telldata-search" placeholder="Search a company"></input><button className="bg-light" onClick={searchOne}>Find</button>
   </div>
+  
+</div>
+
+
+<div className="table">
+
+<table className="table">
+<thead className="telldata-thead">
+<tr>
+<th scope="col">Id</th>
+  <th scope="col">Number</th>
+  <th scope="col">Comment</th>
+  <th scope="col">Type</th>
+  <th scope="col">Researchs</th>
+  <th scope="col">Score</th>
+  <th scope="col">Source</th>
+  <th scope="col">Organization</th>
+</tr>
+</thead>
+<tbody>
+{ telldata.map((data) => ( 
+        
+        <TableRow data={data} key={data.number}/>
+      
+      ))}
+</tbody>      
+</table>
+</div>
+<div>
+<Button text="Load More" color="black" onClick={onLoadMore}/>
+<Button text="Load Less" color="black" onClick={onLoadLess}/>
+</div>
+    </div>
+    
     
     
   </>

@@ -1,0 +1,8 @@
+.twittdata-div{
+    
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+}

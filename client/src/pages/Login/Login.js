@@ -32,7 +32,7 @@ function App() {
     }
   }
   return ( 
-    <div className='auth-container'>
+    <div className='page'>
     { showRegister===true ? <div className="section"><Register  setShowRegister={setShowRegister}/></div> : 
     
       <div className="section"> <h1>Login</h1>
