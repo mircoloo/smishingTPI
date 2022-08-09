@@ -21,14 +21,14 @@ body{
     position: fixed;
     top: 0;
     left: 0;
-    width: 250px;
+    width: 200px;
     height: 100%;
     background-color: var(--secondary-color);
     transition: .5s;
 }
 
 .nav.close{
-    width: 78px;
+    width: 40px;
 }
 
 .nav header{
