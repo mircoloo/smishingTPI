@@ -7,9 +7,13 @@
 
 
 .section-title{
-    color: antiquewhite;        
-    padding: .6rem 0;
-    font-weight: bolder;
+  color: antiquewhite;        
+ padding: .6rem 0;
+    /* color: rgba(245, 65, 0, 0.861); */
+    margin: 1rem 0;
+    background-color: orangered;
+    border-radius: .8rem;
+    font-weight:bolder;
     font-size:3rem;
     text-align: center;
 }
