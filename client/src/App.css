@@ -27,6 +27,8 @@
 .page{
    /*  background-color: red */
    position: absolute;
+   width: 70%;
+   height: auto;
 }
 
 .page-title{
@@ -63,6 +65,15 @@
   
 }
 
+.input-text{
+    padding-left: 10px;
+    flex: 1;
+    border: none;
+    border-radius: .3rem;
+    outline: none;
+
+}
+
 
 /* ================Media screen responsive==================== */
 
@@ -83,6 +94,9 @@
     flex-direction: column;
   }
   div.main {margin-left: 0;}
+  .page{
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -92,6 +106,7 @@
   .twittdata-div .cards .card{
     width: 300px;
   }
+  
 }
 
   

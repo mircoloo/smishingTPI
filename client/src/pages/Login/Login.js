@@ -36,10 +36,13 @@ function App() {
     { showRegister===true ? <div className="section"><Register  setShowRegister={setShowRegister}/></div> : 
     
       <div className="section"> 
+        <form className='login-form form' onSubmit={loginUser}>
       <h1 className='page-title'>Login</h1>
-        <form onSubmit={loginUser}>
-          <input  value={email} onChange={(e) => setEmail(e.target.value)} type="email"  placeholder="Email" /> <br />
-          <input  value={password} onChange={(e) => setPassword(e.target.value)} type="password"  placeholder="Password" /> <br />
+      <div className='inputs'>
+          <input className='input-text'  value={email} onChange={(e) => setEmail(e.target.value)} type="email"  placeholder="Email" /> <br />
+          <input className='input-text' value={password} onChange={(e) => setPassword(e.target.value)} type="password"  placeholder="Password" /> <br />
+      </div>
+          
           <p className='sign-up-text' onClick={() => {setShowRegister(true)}}>Sign up</p>
           <input type="submit" value="Login"/> 
         </form>

@@ -5,7 +5,7 @@ const Card = ({data}) => {
   return (
     <div className="card">
               <div className='card-top'>
-                <a className="card-nickname" href={"https://twitter.com/anyuser/status/" + data.id} target="_blank"  rel="noopener noreferrer">{data.nickname}</a> 
+                <a className="card-nickname" href={"https://twitter.com/anyuser/status/" + data.id} target="_blank"  rel="noopener noreferrer">@{data.nickname}</a> 
                 <div className="card-creation">{data.creation.slice(0,10)}</div>
                 </div>
               <div className="card-body">
