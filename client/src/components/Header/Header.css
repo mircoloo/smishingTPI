@@ -36,7 +36,7 @@ header{
     border-radius: 10px;
     margin: 5px;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
-  filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
 }
 
 .nav.close{
@@ -54,12 +54,16 @@ header{
     font-size: larger;
 }
 
+.nav-refs{
+    text-align: left;
+}
+
 .nav-ref{
     margin-top: 10px;
     height: 20px;
     padding: .5rem;
     color: var(--quarter-color);
-    align-items: center;
+    align-items:flex-start;
     border-radius: .5rem;
     
 }

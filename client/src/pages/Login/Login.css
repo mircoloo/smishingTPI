@@ -8,8 +8,13 @@ body{
 }
 
 
-.sign-up-text{
+.switch-form-text{
     cursor: pointer;
+}
+
+.switch-form-text:hover{
+    transform: scale(1.05);
+    text-decoration: underline;
 }
 
 .form{
@@ -30,5 +35,17 @@ body{
 .inputs *{
     margin: .3rem 0;
     height: 20px;
+}
+
+.radio-inputs{
+        text-align: left;
+}
+.radio-inputs input{
+    margin: .3rem .5rem;
+}
+
+.form .btn{
+    color: var(--secondary-color);
+    background-color: var(--quarter-color);
 }
 

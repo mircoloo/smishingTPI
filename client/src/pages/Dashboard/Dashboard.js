@@ -13,7 +13,6 @@ const Dashboard =  ()  =>{
 </div>
             
             <TwittData/>
-            <hr style={{backgroundColor: "black"}}></hr>
             <TellData/>
         </div>
             

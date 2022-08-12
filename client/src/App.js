@@ -21,6 +21,7 @@ const App = () => {
         <div className='wrapper'>
             
             <Header />
+        
             <div className='main'>
             <Routes>
             <Route element={<PrivateRoutes />} >

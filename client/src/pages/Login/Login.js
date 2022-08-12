@@ -43,8 +43,8 @@ function App() {
           <input className='input-text' value={password} onChange={(e) => setPassword(e.target.value)} type="password"  placeholder="Password" /> <br />
       </div>
           
-          <p className='sign-up-text' onClick={() => {setShowRegister(true)}}>Sign up</p>
-          <input type="submit" value="Login"/> 
+          <p className='sign-up-text switch-form-text' onClick={() => {setShowRegister(true)}}>Sign up</p>
+          <input className='btn' type="submit" value="Login"/> 
         </form>
       </div>
   

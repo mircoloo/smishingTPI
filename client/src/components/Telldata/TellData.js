@@ -93,11 +93,11 @@ return (
 
 <div className="telldata-search-bar">
   <div className="telldata-search">
-      <input id="telldata-search-number input-text" placeholder="Search number informations..." type="text"></input>
+      <input  className="input-text" id="telldata-search-number" placeholder="Search number informations..." type="text"></input>
       <button onClick={searchOne}>Search</button>
   </div>
   <div className="telldata-search">
-      <input id="telldata-search-keywords input-text" placeholder="Search keywords..." type="text"></input>
+      <input  className="input-text" id="telldata-search-keywords" placeholder="Search keywords..." type="text"></input>
       <button onClick={searchKeyWords}>Search</button>
   </div>
 
