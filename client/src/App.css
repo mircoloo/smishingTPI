@@ -102,6 +102,7 @@
 @media screen and (max-width: 400px) {
   .twittdata-div .cards{
     flex-direction: column;
+    margin-right: 10%;
   }
   .twittdata-div .cards .card{
     width: 300px;

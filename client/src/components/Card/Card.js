@@ -17,12 +17,16 @@ const Card = ({data}) => {
                 }
                     
                     <p className='card-comment'>{data.comment}</p>
+                    
+                  
               </div>
-              
+              {console.log(data.imageurl)}
               {
-              data.ImageUrl !== '' && 
-                <div className='card-img'>
-                  <a href={data.imageurl}><img src={data.imageurl}></img></a>
+              data.imageurl !== '' && 
+                <div className='card-img' style={{backgroundImage: `url(${data.imageurl})`}}>
+                  <a href={data.imageurl}>{/* <img src={data.imageurl}></img> */}
+                    <p className='card-img-text'>{data.imagetext}</p>
+                  </a>
                 </div> 
               }
               

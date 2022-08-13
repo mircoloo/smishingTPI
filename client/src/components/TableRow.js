@@ -19,7 +19,7 @@ const TableRow = (props) => {
         style={{color: scoreColor}}
       >{props.data.score}</th>
       <th scope="row">{props.data.source}</th>
-      { props.data.organization && <th scope="row">{props.data.organization}</th>}
+      { <th scope="row">{props.data.organization}</th>}
     </tr>
     </>
     

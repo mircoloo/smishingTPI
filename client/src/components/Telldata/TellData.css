@@ -66,6 +66,7 @@ only screen and (max-width: 760px),
 	/* Force table to not be like tables anymore */
 	table, thead, tbody, th, td, tr { 
 		display: block; 
+		margin-right: 5%;
 	}
 	
 	/* Hide table headers (but not display: none;, for accessibility) */
