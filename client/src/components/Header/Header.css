@@ -37,6 +37,7 @@ header{
     margin: 5px;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);
+    
 }
 
 .nav.close{

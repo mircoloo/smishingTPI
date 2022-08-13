@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 
-const CommentForm = ({handleSubmit, submitLabel, userId}) => {
+const CommentForm = ({handleSubmit, userId}) => {
     const [text, setText] = useState('')
     const isTextAreaDisabled = text.length === 0;
 
@@ -12,9 +12,9 @@ const CommentForm = ({handleSubmit, submitLabel, userId}) => {
     }
 
   return (
-        <form onSubmit={onSubmit}>
-            <textarea className='comment-form-textarea' value={text} onChange={(e) => setText(e.target.value)} />
-            <button className='comment-form-button' disabled={isTextAreaDisabled}>{submitLabel} </button> 
+        <form className='comment-form' onSubmit={onSubmit}>
+            <textarea placeholder='Write a comment...' className='comment-form-textarea' value={text} onChange={(e) => setText(e.target.value)} />
+            <button className='comment-form-button btn' disabled={isTextAreaDisabled}>Write</button> 
         </form>
   )
 }

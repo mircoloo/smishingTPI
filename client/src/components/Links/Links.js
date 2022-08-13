@@ -20,7 +20,7 @@ const Links = () => {
   return (
     <div className="links-page">
       <table className="table">
-        <thead className=" thead-dark">
+        <thead className="thead">
           <tr className='table-header'>
             <th scope="col">Link</th>
             <th scope="col">Count</th>

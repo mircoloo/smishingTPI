@@ -24,6 +24,7 @@ const Header = () => {
       <header>
         
         <img src="./logo.png" className="img-logo"/>
+        
         {/* <i class='bx bx-arrow-to-right toggle' onClick={toggle}></i> */}
       </header>
       

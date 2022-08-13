@@ -74,6 +74,12 @@
 
 }
 
+.table-header *{
+  background-color: var(--quarter-color);
+  color: var(--secondary-color);
+  border-radius: .2rem;
+}
+
 
 /* ================Media screen responsive==================== */
 
@@ -97,11 +103,14 @@
   .page{
     width: 100%;
   }
+
+
 }
 
 @media screen and (max-width: 400px) {
   .twittdata-div .cards{
     flex-direction: column;
+    margin-right: 10%;
   }
   .twittdata-div .cards .card{
     width: 300px;

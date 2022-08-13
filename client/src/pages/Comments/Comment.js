@@ -79,12 +79,12 @@ const Comment = ({data, replies, user}) => {
   return (
       <div className="comment">
         <div className="comment-right-part">
-          <div className='comment-content'>
+          <div className='comment-header'>
             <div className='comment-author'>{data.nickname}</div> 
-            <div>{data.creationDate.slice(0,10) }</div>
+            <div className='comment-creation-date'>{data.creationDate.slice(0,10) }</div>
           </div>
           <div className='comment-text'>{data.comment}</div>
-          <div className='feedbacks'> <span className='feedback' style={{color: 'green'}} onClick={addLike}><i className="fa fa-thumbs-up" />{like}</span> <span className='feedback' style={{color: '#e60b00'}} onClick={addDislike}><i className="fa fa-thumbs-down" />{dislike}</span>  </div>
+          <div className='feedbacks'> <span className='feedback thumbs-up' style={{color: 'green'}} onClick={addLike}><i className="fa fa-thumbs-up" />{like}</span> <span className='feedback thumbs-down' style={{color: '#e60b00'}} onClick={addDislike}><i className="fa fa-thumbs-down" />{dislike}</span>  </div>
           {replies.length > 0 && (
             <div className='replies'>
               {replies.map( (reply) => {
