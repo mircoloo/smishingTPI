@@ -28,7 +28,10 @@ const TwittData = () => {
           })
           
           .then(data => {
-            setTwittdata(data)
+            setTwittdata(twittdata.filter((data) => {
+              console.log(data)
+              return data;
+            }))
           }) 
           
   }
@@ -67,21 +70,19 @@ const TwittData = () => {
     
 
   return (
-    <>
     <div className="twittdata-div"> 
       <h2 className="mt-5">Twittdata</h2>
       <div className="card-columns">
-       
-            { twittdata.map( (data) => {
-                return <Card data={data} key={data.id}/>
-
-})}
+            { 
+            twittdata.map( (data, key) => (
+                <Card data={data} key={data.id}/>
+            ))
+            }
             
     </div>
       <Button text="Load More" color="black" onClick={onLoadMore}/>
       <Button text="Load Less" color="black" onClick={onLoadLess}/>
     </div>
-    </>
     
         
   )
