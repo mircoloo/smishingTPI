@@ -84,7 +84,7 @@ const Comment = ({data, replies, user}) => {
             <div>{data.creationDate.slice(0,10) }</div>
           </div>
           <div className='comment-text'>{data.comment}</div>
-          <div className='feedbacks'> <span className='feedback' style={{color: 'green'}} onClick={addLike}>{like}</span> <span className='feedback' style={{color: 'red'}} onClick={addDislike}>{dislike}</span>  </div>
+          <div className='feedbacks'> <span className='feedback' style={{color: 'green'}} onClick={addLike}><i className="fa fa-thumbs-up" />{like}</span> <span className='feedback' style={{color: '#e60b00'}} onClick={addDislike}><i className="fa fa-thumbs-down" />{dislike}</span>  </div>
           {replies.length > 0 && (
             <div className='replies'>
               {replies.map( (reply) => {

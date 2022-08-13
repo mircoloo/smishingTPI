@@ -6,13 +6,13 @@ const Dashboard =  ()  =>{
 
     return (
         <>  
-        <div className='dashboard-page'>
-{/* <div className='spacer layer1'></div> */}
-<h1 className='text-center'>Dashboard</h1>
+        <div className='page'>
+{/*<div className='spacer layer1'></div> */}
+<div>
+<h1 className='page-title'>Dashboard</h1>
+</div>
+            
             <TwittData/>
-           
-            {/* <div className='spacer layer1'></div> */}
-            <hr style={{backgroundColor: "dark"}}></hr>
             <TellData/>
         </div>
             

@@ -19,16 +19,16 @@ const Links = () => {
 
   return (
     <div className="links-page">
-      <table className="table mt-2">
+      <table className="table">
         <thead className=" thead-dark">
-          <tr>
+          <tr className='table-header'>
             <th scope="col">Link</th>
             <th scope="col">Count</th>
           </tr>
         </thead>
         <tbody>
           {links.map((link) => {
-            return <tr key={link.link}>
+            return <tr key={link.link} className="table-row">
               <th scope="row">{link.link}</th>
               <th scope="row">{link.n}</th>
             </tr>

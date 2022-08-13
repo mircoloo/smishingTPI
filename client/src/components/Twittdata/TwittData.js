@@ -1,5 +1,5 @@
 import React, {useState, useEffect } from "react";
-import Card from "../Card";
+import Card from "../Card/Card"
 import Button from "../Button";
 import './TwittData.css'
 const TwittData = () => {
@@ -30,7 +30,7 @@ const TwittData = () => {
           .then(data => {
             setTwittdata(twittdata.filter((data) => {
               console.log(data)
-              return data;
+              return data; 
             }))
           }) 
           

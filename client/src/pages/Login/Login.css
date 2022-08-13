@@ -3,8 +3,49 @@
     padding: 0;
 }
 
+body{
+    text-align: center;
+}
 
-.sign-up-text{
+
+.switch-form-text{
     cursor: pointer;
+}
+
+.switch-form-text:hover{
+    transform: scale(1.05);
+    text-decoration: underline;
+}
+
+.form{
+    left      : 50%;
+    top       : 50%;
+    position  : absolute;
+    transform : translate(-50%, 50%);
+   background-color: var(--secondary-color);
+   padding: 1.3em 1.2em;
+   border-radius: .8rem;
+   
+}
+
+.inputs{
+    margin: 1rem 0;
+}
+
+.inputs *{
+    margin: .3rem 0;
+    height: 20px;
+}
+
+.radio-inputs{
+        text-align: left;
+}
+.radio-inputs input{
+    margin: .3rem .5rem;
+}
+
+.form .btn{
+    color: var(--secondary-color);
+    background-color: var(--quarter-color);
 }
 

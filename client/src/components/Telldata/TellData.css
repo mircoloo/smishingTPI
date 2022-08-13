@@ -1,11 +1,113 @@
-.telldata-thead{
-    background-color: black;
-    color: white;
-    border-radius: .8rem;
+
+table tr{
+    border-radius: .5rem;
 }
 
 
 .telldata-search-bar{
+    
+}
+
+.telldata-search{
+    background: #fff;
+    width: 300px;
+    height: auto;
     display: flex;
-    justify-content: space-between;
+    margin: 10px 0;
+    border-radius: .3rem;
+}
+
+.telldata-search input{
+    padding-left: 10px;
+    flex: 1;
+    border: none;
+    border-radius: .3rem;
+    outline: none;
+}
+
+.telldata-search button:hover{
+    background-color: #182f49;
+}
+
+
+.telldata-search button{
+    border-radius: .3rem;
+    background: var(--secondary-color);
+    outline: none;
+    border: none;
+    color: #fff;
+    letter-spacing: 1px;
+    cursor: pointer;
+    padding: .2rem .5rem;
+}
+
+
+.table-row *{
+    padding: .3rem .5rem;
+}
+
+.number-row *{
+    color: blue;
+}
+
+.number-row:hover{
+    transform: scale(1.05);
+}
+
+th::before{
+    color: #274c77;
+    position: relative;
+}
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; 
+    
+        margin: 10px auto;
+        border-radius: .8rem;
+        }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data
+	*/
+	th:nth-of-type(1):before { content: "Number:    "; }
+	th:nth-of-type(2):before { content: "Comment:   "; }
+	th:nth-of-type(3):before { content: "Type:  "; }
+	th:nth-of-type(4):before { content: "Researchs: "; }
+	th:nth-of-type(5):before { content: "Score: "; }
+	th:nth-of-type(6):before { content: "Source:    "; }
+	th:nth-of-type(7):before { content: "Organization:  "; }
 }

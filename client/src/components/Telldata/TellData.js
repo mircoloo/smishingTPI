@@ -52,7 +52,7 @@ const TellData = () => {
 
  const searchOne = () => {
 
-  const numberSearch = document.querySelector("#telldata-search").value
+  const numberSearch = document.querySelector("#telldata-search-number").value
   fetch("/api/telldata/getOne?number=" + numberSearch)
   .then(data => data.json())
   .then(data => { 
@@ -60,34 +60,55 @@ const TellData = () => {
     else{ setTelldata([]);}
     setLimit(0)  
   })
-  
-
  }
+
+ const searchKeyWords = () => {
+  const keyWords = document.querySelector("#telldata-search-keywords").value
+  const data = {
+    keyWords
+  }
+
+  fetch("/api/telldata/getKeyWords", {
+    method: 'POST',
+    headers: {
+  'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(data),
+  }) 
+    .then(response => {
+      return response.json()
+    })
+    .then(data => {
+      setTelldata(data)
+    })
+
+  }
   
 
 return (
   <>
     
     <div className="telldata-div">
-    <h2 className="mt-5">TellData<i className="bi bi-search"></i></h2>
+    <h2 className="section-title">TellData<i className="bi bi-search"></i></h2>
 
 <div className="telldata-search-bar">
-  <div>
-  <input id="telldata-search" placeholder="Search a number"></input><button className="bg-light" onClick={searchOne}>Find</button>
+  <div className="telldata-search">
+      <input  className="input-text" id="telldata-search-number" placeholder="Search number informations..." type="text"></input>
+      <button onClick={searchOne}>Search</button>
   </div>
-  <div>
-  <input id="telldata-search" placeholder="Search a company"></input><button className="bg-light" onClick={searchOne}>Find</button>
+  <div className="telldata-search">
+      <input  className="input-text" id="telldata-search-keywords" placeholder="Search keywords..." type="text"></input>
+      <button onClick={searchKeyWords}>Search</button>
   </div>
+
   
 </div>
 
 
-<div className="table">
 
 <table className="table">
-<thead className="telldata-thead">
-<tr>
-<th scope="col">Id</th>
+<thead className="table-thead">
+<tr className="table-header">
   <th scope="col">Number</th>
   <th scope="col">Comment</th>
   <th scope="col">Type</th>
@@ -105,8 +126,7 @@ return (
       ))}
 </tbody>      
 </table>
-</div>
-<div>
+<div className="load-btns">
 <Button text="Load More" color="black" onClick={onLoadMore}/>
 <Button text="Load Less" color="black" onClick={onLoadLess}/>
 </div>

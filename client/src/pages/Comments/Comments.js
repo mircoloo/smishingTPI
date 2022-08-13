@@ -62,6 +62,7 @@ const Comments = () => {
     checkAuth(localStorage.getItem('token')).then((res) => {setUser(res)})
     getComments();
     getNumberInfo();
+    window.scrollTo(0, 0);
     
     
   }, []);

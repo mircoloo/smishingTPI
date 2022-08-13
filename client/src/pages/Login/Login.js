@@ -32,15 +32,19 @@ function App() {
     }
   }
   return ( 
-    <div className='auth-container'>
+    <div className='page'>
     { showRegister===true ? <div className="section"><Register  setShowRegister={setShowRegister}/></div> : 
     
-      <div className="section"> <h1>Login</h1>
-        <form onSubmit={loginUser}>
-          <input  value={email} onChange={(e) => setEmail(e.target.value)} type="email"  placeholder="Email" /> <br />
-          <input  value={password} onChange={(e) => setPassword(e.target.value)} type="password"  placeholder="Password" /> <br />
-          <p className='sign-up-text' onClick={() => {setShowRegister(true)}}>Sign up</p>
-          <input type="submit" value="Login"/> 
+      <div className="section"> 
+        <form className='login-form form' onSubmit={loginUser}>
+      <h1 className='page-title'>Login</h1>
+      <div className='inputs'>
+          <input className='input-text'  value={email} onChange={(e) => setEmail(e.target.value)} type="email"  placeholder="Email" /> <br />
+          <input className='input-text' value={password} onChange={(e) => setPassword(e.target.value)} type="password"  placeholder="Password" /> <br />
+      </div>
+          
+          <p className='sign-up-text switch-form-text' onClick={() => {setShowRegister(true)}}>Sign up</p>
+          <input className='btn' type="submit" value="Login"/> 
         </form>
       </div>
   

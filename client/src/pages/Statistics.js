@@ -4,10 +4,10 @@ import Links from '../components/Links/Links'
 
 const Statistics = () => {
   return (
-    <>
-    <h1 className='text-center'>Statistics</h1>
+      <div className='page-title'>
+       <h1>Statistics</h1>
     <Links/>
-    </>
+    </div>
    
   )
 }

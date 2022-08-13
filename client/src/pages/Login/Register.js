@@ -40,18 +40,23 @@ function App({setShowRegister}) {
   return ( 
  
   <div>
-    <h1>Register</h1>
-    <form onSubmit={registerUser}>
+    <form className='register-form form' onSubmit={registerUser}>
+    <h1 className='page-title'>Register</h1>
     
-      <input type="radio" name='type-acc' value="User" onClick={(e) => setTypeofuser(e.target.value)}/><label htmlFor="html">User</label> <br />
-    <input type="radio"  value="Organization"   name='type-acc' onClick={(e) => setTypeofuser(e.target.value)}/><label htmlFor="html">Organization</label> <br />
+    <div className='radio-inputs'>
+    <input type="radio" name='type-acc' value="User" defaultChecked onClick={(e) => setTypeofuser(e.target.value)}/><label htmlFor="html">User</label> <br />
+    <input type="radio"  value="Organization"   name='type-acc' onClick={(e) => setTypeofuser(e.target.value)}/><label htmlFor="html">Organization</label> <br />  
+    </div> 
+    
       
     
 
-
-      <input  value={email} onChange={(e) => setEmail(e.target.value)} type="email"  placeholder="Email" /> <br />
-      <input  value={password} onChange={(e) => setPassword(e.target.value)} type="password"  placeholder="Password" /> <br />
-      <input type="submit" value="Register"/> 
+    <div className='inputs'>
+    <input  className='input-text' value={email} onChange={(e) => setEmail(e.target.value)} type="email"  placeholder="Email" /> <br />
+      <input  className='input-text' value={password} onChange={(e) => setPassword(e.target.value)} type="password"  placeholder="Password" /> <br />
+    </div>
+    <p className='login-text switch-form-text' onClick={() => {setShowRegister(false)}}>Login</p>
+      <input className='btn' type="submit" value="Register"/> 
     </form>
     </div>
   );

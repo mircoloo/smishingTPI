@@ -1,3 +1,22 @@
 .twittdata-div{
-    background-color: red;
+    
 }
+
+
+
+.cards{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+
+.load-btns{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.load-btns button{
+    border-radius: .5rem;
+}
+
