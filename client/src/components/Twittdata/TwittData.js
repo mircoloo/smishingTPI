@@ -9,6 +9,7 @@ const TwittData = () => {
   const [Limit, setLimit] = useState(3) 
 
 
+
   const getTweets = (limit) => {
 
             let data = {
@@ -28,18 +29,17 @@ const TwittData = () => {
           })
           
           .then(data => {
+            /* var result = data.reduce((unique, o) => {
+              if(!unique.some(obj => obj.ID === o.ID)) {
+                unique.push(o);
+              }
+              return unique;
+          },[]); */
             setTwittdata(data)
           }) 
           
   }
 
-    const fetchData = () => {
-        getTweets()
-      }
-
-    useEffect(() => {
-        fetchData()
-    }, []);
 
     const onLoadMore = () => {
       
@@ -59,10 +59,20 @@ const TwittData = () => {
         limit = Limit-3
         setLimit(limit)
         getTweets(limit)
-      
+        
       
     }
   }
+
+  
+  const fetchData = () => {
+    getTweets()
+  }
+
+  useEffect(() => {
+    fetchData()
+    
+}, []);
     
     
 

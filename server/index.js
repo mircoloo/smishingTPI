@@ -4,6 +4,14 @@ const cors = require('cors')
 //require('./scripts/db')
 const jwt = require('jsonwebtoken')
 var bodyParser = require('body-parser')
+const { spawn } = require('child_process');
+
+
+const python = spawn('python3', ['../server/pyscripts/provaRichieste.py']);
+
+python.stdout.on('data', (data) => {
+  console.log("stdout:" + data)
+})
 
 const PORT = 4000
 
@@ -22,6 +30,7 @@ app.use('/api/twittdata', twittRoute)
 app.use('/api/telldata', tellRoute)
 app.use('/api/users', usersRoute)
 app.use('/api/auth', authRoute)
+
 
 
 

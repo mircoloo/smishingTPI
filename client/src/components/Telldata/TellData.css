@@ -3,8 +3,12 @@ table tr{
     border-radius: .5rem;
 }
 
+.table{
+	box-shadow: 0 7px 25px rgba(0,0,0,0.3);
+}
+
 .telldata-search-bar{
-    
+    border-radius: .8rem;
 }
 
 .telldata-search{

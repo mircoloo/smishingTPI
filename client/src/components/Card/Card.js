@@ -2,7 +2,7 @@ import React  from 'react';
 import './Card.css'
 
 const Card = ({data}) => {
-  console.log(data)
+
   return (
     <div className="card">
               <div className='card-top'>
@@ -12,7 +12,10 @@ const Card = ({data}) => {
               <div className="card-body">
                 
                 <hr></hr> 
-                <p className='card-link'>{data.link}</p>
+                {
+                  data.link !== '' && <p className='card-link'>{data.link}</p>
+                }
+
                 {
                   data.organization && <h5 className='card-organization'>{data.organization}</h5>
                 }
@@ -21,7 +24,6 @@ const Card = ({data}) => {
                     
                   
               </div>
-              {console.log(data.imageurl)}
               {
               data.imageurl !== '' && 
                 <div className='card-img' style={{backgroundImage: `url(${data.imageurl})`}}>
