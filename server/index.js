@@ -1,17 +1,15 @@
 const express = require('express')
 const app = express()
 const cors = require('cors')
-//require('./scripts/db')
+const { updateDatabase } = require('./scripts/db')
 const jwt = require('jsonwebtoken')
 var bodyParser = require('body-parser')
-const { spawn } = require('child_process');
 
 
-const python = spawn('python3', ['../server/pyscripts/provaRichieste.py']);
 
-python.stdout.on('data', (data) => {
-  console.log("stdout:" + data)
-})
+console.log(updateDatabase)
+//db.connectDatabase()
+//db.updateDatabase()
 
 const PORT = 4000
 

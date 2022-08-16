@@ -1,5 +1,6 @@
 const mysql = require('mysql');
 //var settings = require('./settings.json');
+const { spawn } = require('child_process');
 var db;
 
 const settings = {
@@ -24,4 +25,13 @@ function connectDatabase() {
     return db;
 }
 
-module.exports = connectDatabase();
+const updateDatabase = async () => {
+    console.log("Updating database...")
+    const python = spawn('python3', ['../server/pyscripts/sql_updater.py']);
+  
+    python.stdout.on('data', (data) => {
+      console.log("stdout:" + data)
+    })
+  }
+
+module.exports = connectDatabase()

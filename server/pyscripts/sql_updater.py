@@ -33,11 +33,18 @@ def update_tellows_data():
     sql = "INSERT INTO Telldata (number, comment, type, researchs, score, source, organization) VALUES ( %s , %s , %s, %s, %s, %s, %s)"  
     df = tellows.extract_data()
     df_list = df.values.tolist()
-    values = [(el[0], el[1], el[2], el[3], el[4], el[5], el[6]) for el in df_list]
-    print(values[0])
-    mycursor.executemany(sql, values)
-    mydb.commit()
-    print("Tellows:", mycursor.rowcount, "was inserted.") 
+    for row in df_list:
+        try:
+            
+            #sql = f"INSERT INTO Twittdata (id, comment, nickname, creation, imageurl, imagetext, organization, link) VALUES ( '{row[0]}' , '{row[1]}' , '{row[2]}', '{row[3]}', '{row[4]}', '{row[5]}', '{row[6]}', '{row[7]}') WHERE NOT EXISTS ( SELECT * FROM Twittdata WHERE id = '{row[0]}')" 
+            sql = f"INSERT INTO Telldata (number, comment, type, researchs, score, source, organization) SELECT '{row[0]}' , '{row[1]}' , '{row[2]}', {row[3]}, {row[4]}, '{row[5]}', '{row[6]}' WHERE NOT EXISTS (SELECT * FROM Telldata WHERE number = '{row[0]}')"
+            mycursor.execute(sql)
+
+            mydb.commit()
+            counter+=1
+        except:
+            print("Error in inserting row...") 
+    print("Tellows was inserted.") 
 
 
 def update_telguarder_data():
@@ -45,22 +52,33 @@ def update_telguarder_data():
     sql = "INSERT INTO Telldata (number, comment, type, researchs, score, source, organization) VALUES ( %s , %s , %s, %s, %s, %s, %s)"  
     df = tG.extract_data()
     df_list = df.values.tolist()
-    values = [(el[0], el[1], el[2], el[3], el[4], el[5], el[6]) for el in df_list]
-    mycursor.executemany(sql, values)
-    mydb.commit()
-    print("Telguarder:",mycursor.rowcount, "was inserted.") 
+    for row in df_list:
+        try:
+            #sql = f"INSERT INTO Twittdata (id, comment, nickname, creation, imageurl, imagetext, organization, link) VALUES ( '{row[0]}' , '{row[1]}' , '{row[2]}', '{row[3]}', '{row[4]}', '{row[5]}', '{row[6]}', '{row[7]}') WHERE NOT EXISTS ( SELECT * FROM Twittdata WHERE id = '{row[0]}')" 
+            sql = f"INSERT INTO Telldata (number, comment, type, researchs, score, source, organization) SELECT '{row[0]}' , '{row[1]}' , '{row[2]}', {row[3]}, {row[4]}, '{row[5]}', '{row[6]}' WHERE NOT EXISTS (SELECT * FROM Telldata WHERE number = '{row[0]}')"
+            mycursor.execute(sql)
+            mydb.commit()
+            counter+=1
+        except:
+            print("Error in inserting row...")
+    print("Telguarder was inserted.") 
 
 def update_twitter_data(number=10):
     mycursor = mydb.cursor()
-    sql = "INSERT INTO Twittdata VALUES ( %s , %s , %s, %s, %s, %s, %s, %s)" 
     df = twitt.extract_data(number)
     df_list = df.values.tolist()
-    #df_list.encode('utf-8')
-    values = [(el[0], el[1], el[2], el[3], el[4], el[5], el[6], el[7]) for el in df_list]
-    #print(values)
-    mycursor.executemany(sql, values)
-    mydb.commit()
-    print("Twitter:",mycursor.rowcount, "was inserted.")   
+    counter = 0
+    for row in df_list:
+        try:
+            #sql = f"INSERT INTO Twittdata (id, comment, nickname, creation, imageurl, imagetext, organization, link) VALUES ( '{row[0]}' , '{row[1]}' , '{row[2]}', '{row[3]}', '{row[4]}', '{row[5]}', '{row[6]}', '{row[7]}') WHERE NOT EXISTS ( SELECT * FROM Twittdata WHERE id = '{row[0]}')" 
+            sql = f"INSERT INTO Twittdata (id, comment, nickname, creation, imageurl, imagetext, organization, link) SELECT '{row[0]}' , '{row[1]}' , '{row[2]}', '{row[3]}', '{row[4]}', '{row[5]}', '{row[6]}', '{row[7]}' WHERE NOT EXISTS (SELECT * FROM Twittdata WHERE id = '{row[0]}')"
+            mycursor.execute(sql)
+            mydb.commit()
+            counter+=1
+        except:
+            print("Error in inserting row...")
+    
+    print("Twittdata was inserted.")   
 
 if __name__ == '__main__':
     print("Updating data...")

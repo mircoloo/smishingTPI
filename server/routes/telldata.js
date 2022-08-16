@@ -1,6 +1,6 @@
 const express = require('express');
 var router = express.Router();
-const db = require('../scripts/db')
+const db  = require('../scripts/db')
 
 router.post("/getAll",  async (req, res) => {
     //let sql = "SELECT link, COUNT(*) AS n FROM twittdata GROUP BY link HAVING CHAR_LENGTH(link)>0;"
