@@ -12,7 +12,7 @@ export const checkAuth = async (token) => {
                 }
             })
             .then((res) => {return res.json()})
-            .then((data) => {if(data[0].id){return data[0]}else{return false}})
+            .then((data) => {if(data[0].id){return data[0]}else{return false; localStorage.removeItem('token')}})
             
             return toRet
         }

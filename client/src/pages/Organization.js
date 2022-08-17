@@ -12,11 +12,16 @@ const Organization = (props) => {
     
 
     useEffect(() => {
-        checkAuth(localStorage.getItem('token')).then((res) => {setUser(res)})
-        console.log(user)
-        if(!user || Object.keys(user).length === 0){
+        checkAuth(localStorage.getItem('token')).then((res) => {setUser(res);
+            console.log(user)
+            if( user === false){
+                window.location.href = "/login"
+            } 
+        })
+        
+        /* if(!user || Object.keys(user).length === 0){
             window.location.href = "/login"
-        } 
+        }  */
     }, [])
 
     return (

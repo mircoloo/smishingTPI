@@ -2803,3 +2803,206 @@ JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch res
 JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
 JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
 JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1660741308623	geckodriver	INFO	Listening on 127.0.0.1:49810
+1660741309130	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--remote-debugging-port" "49811" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/rq/1yg0fch959b7fln1ssqpcv200000gn/T/rust_mozprofiledyWxL3"
+*** You are running in headless mode.
+2022-08-17 15:01:49.766 plugin-container[14783:110502] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-08-17 15:01:49.766 plugin-container[14783:110502] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1660741309798	Marionette	INFO	Marionette enabled
+1660741309831	Marionette	INFO	Listening on port 49818
+WebDriver BiDi listening on ws://localhost:49811
+Read port: 49818
+2022-08-17 15:01:49.922 plugin-container[14783:110502] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-08-17 15:01:49.922 plugin-container[14783:110502] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-08-17 15:01:49.922 plugin-container[14783:110536] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-08-17 15:01:49.922 plugin-container[14783:110536] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1660741310342	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rq/1yg0fch959b7fln1ssqpcv200000gn/T/rust_mozprofiledyWxL3/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49811/devtools/browser/28a61cf3-b263-4b68-ae5f-ecce6a635fb3
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 616 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+2022-08-17 13:02:08.246 plugin-container[14792:110998] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-08-17 13:02:08.246 plugin-container[14792:110998] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-08-17 13:02:08.249 plugin-container[14792:110998] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-08-17 13:02:08.249 plugin-container[14792:110998] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-08-17 13:02:08.250 plugin-container[14792:110999] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-08-17 13:02:08.250 plugin-container[14792:110999] nil host used in call to allowsAnyHTTPSCertificateForHost:
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 4445 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 1607 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 6625 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 3892 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 1121 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 2874 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: uncaught exception: 7
+JavaScript error: , line 0: uncaught exception: 7
+JavaScript error: https://s0.2mdn.net/879366/Enabler_01_247.js, line 180: TypeError: d is null
+JavaScript error: https://s0.2mdn.net/sadbundle/5866623989484355584/assets/js/nhdynamic.js, line 716: TypeError: $(...).textfit is not a function
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 2705 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 6508 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 4173 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 7738 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 7124 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 6474 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 1424 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 1539 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 7349 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 4616 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 7640 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 1173 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 6871 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 2240 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 7338 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 3336 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: uncaught exception: 7
+JavaScript error: , line 0: uncaught exception: 7
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 3856 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 4123 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 2781 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 4897 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 4056 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 3697 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 5680 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 5141 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://z.moatads.com/quantcastv2691176990399/moatad.js#moatClientLevel1=p-1RYxePXT9bCS2&moatClientLevel2=qfm&moatClientLevel3=bd83f732-99ef-4215-bf3b-c2721e798562&moatClientLevel4=32f99122-d233-40c9-acee-21e0e164196f&uid=aolENzuJRmwkiRg6bcUUOj-JDTY72kEiPd9DbWyKRGpo3URqAxDH7A==, line 237: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 3186 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1660741399820	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: , line 0: uncaught exception: Object
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1660741400363	Marionette	INFO	Stopped listening on port 49818
+1660741407056	geckodriver	INFO	Listening on 127.0.0.1:50438
+1660741407578	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "--remote-debugging-port" "50439" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/rq/1yg0fch959b7fln1ssqpcv200000gn/T/rust_mozprofile4jrmpT"
+*** You are running in headless mode.
+2022-08-17 15:03:27.970 plugin-container[14833:111962] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-08-17 15:03:27.971 plugin-container[14833:111962] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-08-17 15:03:27.975 plugin-container[14833:111962] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-08-17 15:03:27.975 plugin-container[14833:111962] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-08-17 15:03:27.975 plugin-container[14833:111974] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-08-17 15:03:27.975 plugin-container[14833:111974] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1660741408253	Marionette	INFO	Marionette enabled
+1660741408265	Marionette	INFO	Listening on port 50446
+WebDriver BiDi listening on ws://localhost:50439
+Read port: 50446
+1660741408367	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/rq/1yg0fch959b7fln1ssqpcv200000gn/T/rust_mozprofile4jrmpT/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50439/devtools/browser/11401b31-bd73-4674-94e6-710cd2a451ea
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 953 > eval line 1 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 1963 > eval line 1 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 5953 > eval line 1 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 5674 > eval line 1 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 1504 > eval line 1 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript error: https://www.telguarder.com/it/numero/3384588396, line 1: SyntaxError: illegal character U+0010
+JavaScript error: https://www.telguarder.com/it/numero/3384588396, line 1: SyntaxError: illegal character U+0010
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 398 > eval line 1 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 3731 > eval line 1 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://z.moatads.com/emxsspdisplay905071498485/moatad.js?moatClientLevel1=1759&moatClientLevel2=13829&moatClientLevel3=155401&moatClientSlicer1=telguarder.com&moatClientSlicer2=&moatClientSlicer3=, line 234: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://z.moatads.com/emxsspdisplay905071498485/moatad.js?moatClientLevel1=1759&moatClientLevel2=13829&moatClientLevel3=155401&moatClientSlicer1=telguarder.com&moatClientSlicer2=&moatClientSlicer3=, line 234: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 3789 > eval line 1 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript error: https://www.telguarder.com/it/numero/0125719039, line 1: SyntaxError: illegal character U+0010
+JavaScript error: https://www.telguarder.com/it/numero/0125719039, line 1: SyntaxError: illegal character U+0010
+JavaScript warning: https://z.moatads.com/emxsspdisplay905071498485/moatad.js?moatClientLevel1=1759&moatClientLevel2=13829&moatClientLevel3=155401&moatClientSlicer1=telguarder.com&moatClientSlicer2=&moatClientSlicer3=, line 234: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://z.moatads.com/emxsspdisplay905071498485/moatad.js?moatClientLevel1=1759&moatClientLevel2=13829&moatClientLevel3=155401&moatClientSlicer1=telguarder.com&moatClientSlicer2=&moatClientSlicer3=, line 234: Failed to create WebGL context: WebGL is currently disabled.
+2022-08-17 13:04:07.661 plugin-container[14844:112523] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-08-17 13:04:07.662 plugin-container[14844:112523] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-08-17 13:04:07.665 plugin-container[14844:112523] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-08-17 13:04:07.665 plugin-container[14844:112523] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-08-17 13:04:07.665 plugin-container[14844:112527] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-08-17 13:04:07.665 plugin-container[14844:112527] nil host used in call to allowsAnyHTTPSCertificateForHost:
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 4127 > eval line 1 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 6341 > eval line 1 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 603 > eval line 1 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript error: https://www.telguarder.com/it/numero/3204412121, line 1: SyntaxError: illegal character U+0010
+JavaScript warning: https://z.moatads.com/emxsspdisplay905071498485/moatad.js?moatClientLevel1=1759&moatClientLevel2=13829&moatClientLevel3=155401&moatClientSlicer1=telguarder.com&moatClientSlicer2=&moatClientSlicer3=, line 234: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://z.moatads.com/emxsspdisplay905071498485/moatad.js?moatClientLevel1=1759&moatClientLevel2=13829&moatClientLevel3=155401&moatClientSlicer1=telguarder.com&moatClientSlicer2=&moatClientSlicer3=, line 234: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 7298 > eval line 1 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 7015 > eval line 1 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 4903 > eval line 1 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 5041 > eval line 1 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 3616 > eval line 1 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 5137 > eval line 1 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://z.moatads.com/quantcastv2691176990399/moatad.js#moatClientLevel1=p-qWYSyhH1C_Mh2&moatClientLevel2=qfm&moatClientLevel3=0aff021f-d72f-4747-b446-5452e5039fe2&moatClientLevel4=08c84ce5-1d05-4441-bf3c-b860ce933961&uid=Wj4dRgtkT0JAP0xAWysaFVxlA01UPx1ZXTAbQw5iGxAPYksQ88kIug==, line 237: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://z.moatads.com/quantcastv2691176990399/moatad.js#moatClientLevel1=p-qWYSyhH1C_Mh2&moatClientLevel2=qfm&moatClientLevel3=0aff021f-d72f-4747-b446-5452e5039fe2&moatClientLevel4=08c84ce5-1d05-4441-bf3c-b860ce933961&uid=Wj4dRgtkT0JAP0xAWysaFVxlA01UPx1ZXTAbQw5iGxAPYksQ88kIug==, line 237: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 439 > eval line 1 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 6054 > eval line 1 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 6039 > eval line 1 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 7306 > eval line 1 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 6359 > eval line 1 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 6233 > eval line 1 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 415 > eval line 1 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 2090 > eval line 1 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 5171 > eval line 1 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 3847 > eval line 1 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 5466 > eval line 1 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 7239 > eval line 1 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript error: https://eus.rubiconproject.com/usync.js, line 4: SecurityError: The operation is insecure.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/lIG_-rjQweUtsPTJkqViasoL1XPo6OtXzg5InKx-NMQ.js line 2 > eval line 3725 > eval line 1 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL is currently disabled.
+1660741513574	Marionette	INFO	Stopped listening on port 50446
