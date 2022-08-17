@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Routes} from 'react-router-dom'
+import { Route, Routes, useLocation} from 'react-router-dom'
 import Dashboard from './pages/Dashboard/Dashboard'
 import Header from './components/Header/Header'
 import Statistics from './pages/Statistics'
@@ -15,13 +15,13 @@ import './App.css'
 
 
 const App = () => {
-
+    const location = useLocation();
+    
     return (
         <>
         <div className='wrapper'>
-            
             <Header />
-        
+
             <div className='main'>
             <Routes>
             <Route element={<PrivateRoutes />} >

@@ -27,11 +27,13 @@ function connectDatabase() {
 
 const updateDatabase = async () => {
     console.log("Updating database...")
-    const python = spawn('python3', ['../server/pyscripts/sql_updater.py']);
+    const python = spawn('python3', ['../pyscripts/sql_updater.py']);
   
     python.stdout.on('data', (data) => {
       console.log("stdout:" + data)
     })
   }
+
+updateDatabase()
 
 module.exports = connectDatabase()

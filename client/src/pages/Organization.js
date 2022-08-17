@@ -13,12 +13,18 @@ const Organization = (props) => {
 
     useEffect(() => {
         checkAuth(localStorage.getItem('token')).then((res) => {setUser(res)})
+        console.log(user)
+        if(!user || Object.keys(user).length === 0){
+            window.location.href = "/login"
+        } 
     }, [])
 
     return (
+        
+        
         <div className='page'>
             <h1 className='page-title'></h1>
-        {   user.typeofuser === "Organization" ?  <OrgPage user={user}/> : <UserPage user={user}/>    }
+        {   user.typeofuser === "Organization" ?   <OrgPage user={user}/> : <UserPage user={user}/>    }
         
         </div>
     )

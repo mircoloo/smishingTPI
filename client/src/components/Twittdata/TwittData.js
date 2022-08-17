@@ -64,6 +64,50 @@ const TwittData = () => {
     }
   }
 
+  const searchKeyWords = () => {
+    const keyWords = document.querySelector("#twittdata-search-keywords").value
+    const data = {
+      keyWords
+    }
+  
+    fetch("/api/twittdata/getKeyWords", {
+      method: 'POST',
+      headers: {
+    'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+    }) 
+      .then(response => {
+        return response.json()
+      })
+      .then(data => {
+        setTwittdata(data)
+      })
+  
+    }
+
+    const searchOrganization = () => {
+      const keyWords = document.querySelector("#twittdata-search-organization").value
+      const data = {
+        keyWords
+      }
+    
+      fetch("/api/twittdata/getOrganization", {
+        method: 'POST',
+        headers: {
+      'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+      }) 
+        .then(response => {
+          return response.json()
+        })
+        .then(data => {
+          setTwittdata(data)
+        })
+    
+      }
+
   
   const fetchData = () => {
     getTweets()
@@ -80,6 +124,18 @@ const TwittData = () => {
     <>
     <div className="twittdata-div"> 
       <h2 className="section-title">Twittdata</h2>
+      <div className="telldata-search-bar">
+  <div className="telldata-search">
+      <input  className="input-text" id="twittdata-search-keywords" placeholder="Search keywords..." type="text"></input>
+      <button onClick={searchKeyWords}>Search</button>
+  </div>
+  <div className="telldata-search">
+      <input  className="input-text" id="twittdata-search-organization" placeholder="Search organization..." type="text"></input>
+      <button onClick={searchOrganization}>Search</button>
+  </div>
+
+  
+</div>
       <div className="cards">
        
             { twittdata.map( (data) => {

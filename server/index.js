@@ -7,7 +7,7 @@ var bodyParser = require('body-parser')
 
 
 
-console.log(updateDatabase)
+//console.log(updateDatabase)
 //db.connectDatabase()
 //db.updateDatabase()
 

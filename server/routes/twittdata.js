@@ -17,11 +17,29 @@ router.post("/getAll",  async (req, res) => {
 })
 
 
+
+
 router.get("/getLinks", async (req, res) => {
     let sql = "SELECT link, COUNT(*) AS n FROM Twittdata GROUP BY link HAVING CHAR_LENGTH(link)>0;"
     await db.query(sql, (err, result) => {
         if(err) throw(err)
         res.json(result)
+    })
+})
+
+router.post("/getOrganization", async (req, res) => {
+    const { keyWords } = req.body 
+    const sql = `SELECT * FROM Twittdata WHERE organization LIKE '%${keyWords}%';`
+    await db.query(sql, (err, result) => {
+    res.json(result)  
+    })
+})
+
+router.post("/getKeyWords", async (req, res) => {
+    const { keyWords } = req.body 
+    const sql = `SELECT * FROM Twittdata WHERE comment LIKE '%${keyWords}%';`
+    await db.query(sql, (err, result) => {
+    res.json(result)  
     })
 })
 
