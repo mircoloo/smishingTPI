@@ -35,6 +35,9 @@ const Links = () => {
             })}
         </tbody>
       </table>
+
+      {/* <PieChart nome="ciao"/> */}
+
     </div>
   )
 }

@@ -31,12 +31,14 @@
    height: auto;
 }
 
-.page-title{
+.page-title, .section-title{
     width: 100%;
     color: var(--third-color);
     margin: 20px 0;
-    
+
 }
+
+
 
 .flip {
     transform: rotate(-180deg);
@@ -104,6 +106,9 @@
     width: 100%;
   }
 
+  .chart{
+    width: 85%;
+  }
 }
 
 @media screen and (max-width: 400px) {

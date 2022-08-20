@@ -27,15 +27,7 @@ router.post("/getKeyWords", async (req, res) => {
 })
 
 
-router.get('/comments/:number', async (req, res) => {
-    
-    let { number } = req.params;
-    let sql = "SELECT  C.id, C.telldata_id, C.comment, C.nickname, C.likes, C.dislikes, C.creationDate, C.parentId FROM Comments as C, Telldata as T WHERE C.telldata_id = T.id AND T.number = " + number;
-    await db.query(sql, (err, result) => {
-        if(err) throw(err)
-        res.json(result)
-    })
-})
+
 
 router.post('/comments', async (req, res) => {
     let { telldata_id, nickname, comment} = req.body;
@@ -64,6 +56,17 @@ router.post('/comments/addLike', async (req, res) => {
     }
 })
 
+router.get('/comments/typeOfSms', async (req, res) => {
+    //console.log(req.params)
+
+    let sql = `SELECT type,COUNT(*) as count FROM Telldata GROUP BY type` 
+    await db.query(sql, (err, result) => {
+        if(err) throw(err)
+        res.json(result)
+    })
+})
+
+
 router.get('/comments/:id/getLike', async (req, res) => {
         //console.log(req.params)
     
@@ -74,6 +77,15 @@ router.get('/comments/:id/getLike', async (req, res) => {
         })
 })
 
+router.get('/comments/:number', async (req, res) => {
+    
+    let { number } = req.params;
+    let sql = "SELECT  C.id, C.telldata_id, C.comment, C.nickname, C.likes, C.dislikes, C.creationDate, C.parentId FROM Comments as C, Telldata as T WHERE C.telldata_id = T.id AND T.number = " + number;
+    await db.query(sql, (err, result) => {
+        if(err) throw(err)
+        res.json(result)
+    })
+})
 
 router.post('/comments/addDislike', async (req, res) => {
     let { comment_id, user_id } = req.body
@@ -100,6 +112,9 @@ router.get('/comments/:id/getDislike', async (req, res) => {
         res.json(result)
     })
 })
+
+
+
     
 
 

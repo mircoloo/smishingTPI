@@ -20,7 +20,7 @@ router.post("/getAll",  async (req, res) => {
 
 
 router.get("/getLinks", async (req, res) => {
-    let sql = "SELECT link, COUNT(*) AS n FROM Twittdata GROUP BY link HAVING CHAR_LENGTH(link)>0;"
+    let sql = "SELECT link, COUNT(*) AS n FROM Twittdata GROUP BY link HAVING CHAR_LENGTH(link)>0 ORDER BY COUNT(*) DESC;"
     await db.query(sql, (err, result) => {
         if(err) throw(err)
         res.json(result)

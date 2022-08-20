@@ -25,6 +25,7 @@ body{
    background-color: var(--secondary-color);
    padding: 1.3em 1.2em;
    border-radius: .8rem;
+   box-shadow: 0 14px 60px rgba(0,0,0,.6);
    
 }
 
