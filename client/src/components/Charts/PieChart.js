@@ -48,10 +48,10 @@ const PieChart = ({data, pieTitle}) => {
   return (
     
     
-      <>
-      <h4 className='section-title'>{pieTitle}</h4>
-      { pieData && <div className='pie-chart chart'><Pie data={pieData} options={options}/></div> }
-      </>
+      <div className='chart'>
+        <h2 className='chart-title'>{pieTitle}</h2>
+        { pieData && <div className='pie-chart'><Pie data={pieData} options={options}/></div> }
+      </div>
     
   )
 }

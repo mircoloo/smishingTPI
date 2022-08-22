@@ -35,14 +35,12 @@ const Statistics = () => {
       <Links/>
       
       <div className='pie-charts-section'>
-      <h2 className='section-title'></h2>
-      <div className='charts'>
-      {typesOfSms  && <PieChart data={typesOfSms} pieTitle="Types of SMS"/>}
-      {organizations && <PieChart data={organizations} pieTitle="Organizations"/>}
-    </div>
-    </div>
-    
-      
+        <h2 className='section-title'></h2>
+        <div className='charts'>
+          {typesOfSms  && <PieChart data={typesOfSms} pieTitle="Types of SMS"/>}
+          {organizations && <PieChart data={organizations} pieTitle="Organizations"/>}
+        </div>
+      </div>  
     </div>
   )
 }
