@@ -1,4 +1,15 @@
+.pie-charts-section{
+    
+}
+
+.charts{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
 .chart{
+    margin: 20px 0;
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 1rem;
     box-shadow: 0 7px 25px rgba(0,0,0,0.3);;

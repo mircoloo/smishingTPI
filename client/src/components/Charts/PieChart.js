@@ -6,7 +6,7 @@ import './Charts.css'
 
 
 
-const PieChart = ({data}) => {
+const PieChart = ({data, pieTitle}) => {
   const colors = []
   const [pieData, setPieData] = useState()
   
@@ -30,7 +30,7 @@ const PieChart = ({data}) => {
   const setData = () => {
     
     setPieData({
-      labels: data.map( (type) => type.type),
+      labels: data.map( (type) => type.label),
       datasets: [{
         data: data.map( (type) => type.count),
         backgroundColor: colors
@@ -42,16 +42,17 @@ const PieChart = ({data}) => {
 
   useEffect(() => {
     setData()
-    
   }, [])
   
   
   return (
     
-    <div className='pie-chart-section'>
-      <h2 className='section-title'>Pie charts</h2>
+    
+      <>
+      <h4 className='section-title'>{pieTitle}</h4>
       { pieData && <div className='pie-chart chart'><Pie data={pieData} options={options}/></div> }
-    </div>
+      </>
+    
   )
 }
 

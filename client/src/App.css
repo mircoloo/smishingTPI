@@ -12,6 +12,10 @@
   --quarter-color: #a3cef1;
 }
 
+body{
+  overflow-x: hidden;
+}
+
 .wrapper{
     display: flex;
     justify-content: space-between;

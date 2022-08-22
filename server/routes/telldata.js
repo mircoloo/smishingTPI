@@ -59,7 +59,7 @@ router.post('/comments/addLike', async (req, res) => {
 router.get('/comments/typeOfSms', async (req, res) => {
     //console.log(req.params)
 
-    let sql = `SELECT type,COUNT(*) as count FROM Telldata GROUP BY type` 
+    let sql = `SELECT type as label ,COUNT(*) as count FROM Telldata GROUP BY type` 
     await db.query(sql, (err, result) => {
         if(err) throw(err)
         res.json(result)

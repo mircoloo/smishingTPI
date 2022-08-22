@@ -1,4 +1,5 @@
 #!python3
+from copyreg import constructor
 from time import sleep
 import pandas as pd
 import tweepy
@@ -36,7 +37,7 @@ def extract_data(maxResults: int=10) -> pd.DataFrame:
     data = []
 
     #build the set of media_key -> url in order to use it later for a faster research
-    imgUrls = {u['media_key']: u.url for u in results.includes['media'] if u.type == 'photo'}
+    imgUrls = {u['media_key']: u.url for u in results.includes['media'] if u.type == 'photo' and results.includes['media']}
     users = {u['id']: u for u in results.includes['users']}
 
     #iterate for all the tweets in results

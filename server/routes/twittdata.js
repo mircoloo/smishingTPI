@@ -43,4 +43,12 @@ router.post("/getKeyWords", async (req, res) => {
     })
 })
 
+router.get('/typeOfOrganizations', async (req, res) => {
+    let sql = "SELECT COUNT(*) as count, organization as label FROM twittdata WHERE organization != '' GROUP BY organization;" 
+    await db.query(sql, (err, result) => {
+        if(err) throw(err)
+        res.json(result)
+    })
+})
+
 module.exports = router
