@@ -14,13 +14,7 @@ const TellData = () => {
       skip: 0,
       limit: limit,
     }
-      fetch("/api/telldata/getAll", {
-        method: 'POST',
-        headers: {
-      'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-      }) 
+      fetch("/api/telldata/?limit=" + limit) 
         .then(response => {
           return response.json()
         })
@@ -53,7 +47,7 @@ const TellData = () => {
  const searchOne = () => {
 
   const numberSearch = document.querySelector("#telldata-search-number").value
-  fetch("/api/telldata/getOne?number=" + numberSearch)
+  fetch("/api/telldata/number/?number=" + numberSearch)
   .then(data => data.json())
   .then(data => { 
     if(data[0]){setTelldata([data[0]])}

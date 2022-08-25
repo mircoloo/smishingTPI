@@ -16,14 +16,7 @@ const TwittData = () => {
               skip: 0,
               limit: limit,
             }
-          fetch("/api/twittdata/getAll", {
-            method: 'POST',
-            headers: {
-          'Content-Type': 'application/json',
-          },
-          
-          body: JSON.stringify(data),
-          })
+          fetch("/api/twittdata/?limit=" + limit)
           .then(response => {
             return response.json()
           })

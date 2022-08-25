@@ -23,12 +23,14 @@ function App() {
     })
     })
 
+
     const data = await response.json()
+    console.log(data)
     if(data.user){
       localStorage.setItem('token', data.user.token)
       window.location.href = '/organization'
     }else{
-      //.....
+      document.querySelector('.login-form').style.borderColor = "red"
     }
   }
   return ( 

@@ -37,12 +37,6 @@ const Header = () => {
           <li className='nav-ref'><i className='bx bxs-help-circle' ></i><Link className="nav-link" to="/about">About</Link></li>
         </ul>
         </div>
-      
-      
-      
-      
-      
-
     </div>
   )
 }
