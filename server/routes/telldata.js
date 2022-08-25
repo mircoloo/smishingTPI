@@ -43,15 +43,26 @@ router.post('/comments', async (req, res) => {
 router.post('/comments/addLike', async (req, res) => {
     let { comment_id, user_id } = req.body
     
-    if (!comment_id || !user_id){res.json("Missing informations")}else{
-        let sql = `INSERT INTO Likes (comment_id, user_id) select ${comment_id}, ${user_id} WHERE NOT EXISTS (SELECT * FROM Likes WHERE comment_id = ${comment_id} AND user_id = ${user_id});` 
-        await db.query(sql, (err, result) => {
+    if (!comment_id || !user_id){res.json("Missing informations")}else
+    
+    {
+
+            let sql = `SELECT * FROM Likes WHERE comment_id = ${comment_id} AND user_id = ${user_id}`
+/*         let sql = `INSERT INTO Likes (comment_id, user_id) select ${comment_id}, ${user_id} WHERE NOT EXISTS (SELECT * FROM Likes WHERE comment_id = ${comment_id} AND user_id = ${user_id});` 
+ */        await db.query(sql, (err, result) => {
             if(err) throw(err)
-            if(result.affectedRows){
-                res.json({added: true})
+            if(result.length > 0){
+                sql = `DELETE FROM Likes WHERE comment_id = ${comment_id} AND user_id = ${user_id}`
+                 db.query(sql, (err, result) => {
+                    res.json({added: false})
+                 })
             }else{
-                res.json({added: false})
+                sql = `INSERT INTO Likes (comment_id, user_id) select ${comment_id}, ${user_id} WHERE NOT EXISTS (SELECT * FROM Likes WHERE comment_id = ${comment_id} AND user_id = ${user_id});`
+                 db.query(sql, (err, result) => {
+                    res.json({added: true})
+                 })
             } 
+            
         })
     }
 })
@@ -90,15 +101,26 @@ router.get('/comments/:number', async (req, res) => {
 router.post('/comments/addDislike', async (req, res) => {
     let { comment_id, user_id } = req.body
     
-    if (!comment_id || !user_id){res.json("Missing informations")}else{
-        let sql = `INSERT INTO Dislikes (comment_id, user_id) select ${comment_id}, ${user_id} WHERE NOT EXISTS (SELECT * FROM Dislikes WHERE comment_id = ${comment_id} AND user_id = ${user_id});` 
-        await db.query(sql, (err, result) => {
+    if (!comment_id || !user_id){res.json("Missing informations")}else
+    
+    {
+
+            let sql = `SELECT * FROM Dislikes WHERE comment_id = ${comment_id} AND user_id = ${user_id}`
+/*         let sql = `INSERT INTO Likes (comment_id, user_id) select ${comment_id}, ${user_id} WHERE NOT EXISTS (SELECT * FROM Likes WHERE comment_id = ${comment_id} AND user_id = ${user_id});` 
+ */        await db.query(sql, (err, result) => {
             if(err) throw(err)
-            if(result.affectedRows){
-                res.json({added: true})
+            if(result.length > 0){
+                sql = `DELETE FROM Dislikes WHERE comment_id = ${comment_id} AND user_id = ${user_id}`
+                 db.query(sql, (err, result) => {
+                    res.json({added: false})
+                 })
             }else{
-                res.json({added: false})
+                sql = `INSERT INTO Dislikes (comment_id, user_id) select ${comment_id}, ${user_id} WHERE NOT EXISTS (SELECT * FROM Dislikes WHERE comment_id = ${comment_id} AND user_id = ${user_id});`
+                 db.query(sql, (err, result) => {
+                    res.json({added: true})
+                 })
             } 
+            
         })
     }
 })

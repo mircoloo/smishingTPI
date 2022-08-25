@@ -23,7 +23,7 @@ const Header = () => {
     <div className='nav'>
       <header>
         
-        <img src="./logo.png" className="img-logo"/>
+        <div className="img-logo"></div>
         
         {/* <i class='bx bx-arrow-to-right toggle' onClick={toggle}></i> */}
       </header>

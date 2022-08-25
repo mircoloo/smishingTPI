@@ -6,7 +6,7 @@ import CommentForm from "../../components/CommentForm";
 
 
 const { checkAuth } = require("../../utils/checkAuth");
-
+  
 const Comments = () => {
   const [backendComments, setBackendComments] = useState([]);
   const rootComment = backendComments.filter(

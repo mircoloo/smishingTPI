@@ -5,7 +5,6 @@ const Comment = ({data, replies, user}) => {
   const [like, setLike] = useState(0)
   const [dislike, setDislike] = useState(0)
 
-
   const getLike = async () => {
     await fetch(`/api/telldata/comments/${data.id}/getLike`)
     .then((res) => {return res.json()})
@@ -75,7 +74,7 @@ const Comment = ({data, replies, user}) => {
     getDislike()
   }, [])
 
-
+  
   return (
       <div className="comment">
         <div className="comment-right-part">
