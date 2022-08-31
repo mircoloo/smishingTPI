@@ -98,6 +98,15 @@
     
 }
 
+.add-tweet-btn{
+    border: none;
+    background-color: white;
+    color: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
 
 
 

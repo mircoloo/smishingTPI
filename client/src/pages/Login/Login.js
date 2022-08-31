@@ -3,12 +3,10 @@ import React, { useState } from 'react'
 import Register from './Register'
 import './Login.css'
 
-function App() {
-
+const Login = ({changeLogStatus}) => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [showRegister, setShowRegister] = useState(false)
-
   const loginUser = async (event) => {
     event.preventDefault();
 
@@ -22,12 +20,10 @@ function App() {
       password
     })
     })
-
-
     const data = await response.json()
-    console.log(data)
     if(data.user){
       localStorage.setItem('token', data.user.token)
+      changeLogStatus()
       window.location.href = '/organization'
     }else{
       document.querySelector('.login-form').style.borderColor = "red"
@@ -62,4 +58,4 @@ function App() {
   );
 }
 
-export default App;
+export default Login;

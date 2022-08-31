@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Route, Routes, useLocation} from 'react-router-dom'
 import Dashboard from './pages/Dashboard/Dashboard'
 import Header from './components/Header/Header'
@@ -17,7 +17,12 @@ import './App.css'
 const App = () => {
 
     const location = useLocation();
-
+    const [isLogged, setIsLogged] = useState(false)
+    
+    const changeLogStatus = () => {
+        setIsLogged(true);
+      };
+   
     return (
         <>
         <div className='wrapper'>
@@ -25,12 +30,12 @@ const App = () => {
             <div className='main'>
             <Routes>
                 <Route element={<PrivateRoutes />} >
-                    <Route path="/organization" element={<Organization />} />
+                    <Route path="/organization" element={<Organization isLogged={isLogged} />} />
                 </Route>
 
                 <Route path="/about" element={ <About />}/>
-                <Route path="/" element={ <Dashboard />}/>
-                <Route path="/login" element={ <Login /> }/>
+                <Route exact path="/" element={ <Dashboard />}/>
+                <Route path="/login" element={ <Login changeLogStatus={changeLogStatus} /> }/>
 
                 <Route exact path="/dashboard" element={ <Dashboard />} /> 
                 <Route exact path="/comments/:number" element={ <Comments />}/>

@@ -100,7 +100,7 @@ body{
     position: relative;
   }
   nav-ref{
-    flex-direction: row;
+        flex-direction: row;
   }
   .wrapper{
     flex-direction: column;

@@ -2,13 +2,20 @@ import React, {useState, useEffect } from "react";
 import Card from "../Card/Card";
 import Button from "../Button";
 import './TwittData.css'
+import { isAuthenticated } from "../../utils/isAuthenticated";
 const TwittData = () => {
 
   const [twittdata, setTwittdata] = useState([])
     //const [Skip, setSkip] = useState(0)    
   const [Limit, setLimit] = useState(3) 
+  const [organization, setOrganization] = useState({})
 
-
+  const getOrganization = () => {
+    isAuthenticated(localStorage.getItem('token'))
+    .then(res => { if(res.typeofuser === 'Organization'){
+      setOrganization(res)
+    } })
+  }
 
   const getTweets = (limit) => {
 
@@ -108,7 +115,7 @@ const TwittData = () => {
 
   useEffect(() => {
     fetchData()
-    
+    getOrganization()
 }, []);
     
     
@@ -130,9 +137,8 @@ const TwittData = () => {
   
 </div>
       <div className="cards">
-       
             { twittdata.map( (data) => {
-                return <Card data={data} key={data.id}/>
+                return <Card org={organization} data={data} key={data.id}/>
 
 })}
             

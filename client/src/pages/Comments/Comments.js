@@ -5,7 +5,7 @@ import "./Comments.css";
 import CommentForm from "../../components/CommentForm";
 
 
-const { checkAuth } = require("../../utils/checkAuth");
+const { isAuthenticated } = require("../../utils/isAuthenticated");
   
 const Comments = () => {
   const [backendComments, setBackendComments] = useState([]);
@@ -59,7 +59,7 @@ const Comments = () => {
     }
  
   useEffect(() => {
-    checkAuth(localStorage.getItem('token')).then((res) => {setUser(res)})
+    isAuthenticated(localStorage.getItem('token')).then((res) => {setUser(res)})
     getComments();
     getNumberInfo();
     window.scrollTo(0, 0);

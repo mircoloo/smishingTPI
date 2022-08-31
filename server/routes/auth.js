@@ -46,7 +46,7 @@ router.post('/login' ,async (req, res) => {
         let { id, typeofuser, email} = result[0];
         const token = jwt.sign({id, typeofuser}, process.env.SECRET_JWT_KEY, {expiresIn: 300})
 
-        res.status(200).json({user: {email, typeofuser, token}})
+        res.status(200).json({user: {id, email, typeofuser, token}})
     }else{
         res.status(400).json({error: "Wrong credentials"})
     }

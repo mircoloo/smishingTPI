@@ -4,24 +4,18 @@ import OrgPage from './OrgPage/OrgPage'
 import UserPage from './UserPage/UserPage'
 
 
-const { checkAuth }  = require('../utils/checkAuth')
+const { isAuthenticated }  = require('../utils/isAuthenticated')
 
 const Organization = (props) => {
-
     const [user, setUser] = useState({})
-    
-
+    const token = localStorage.getItem('token')
     useEffect(() => {
-        checkAuth(localStorage.getItem('token')).then((res) => {setUser(res);
-            console.log(user)
+        isAuthenticated(token).then((res) => {
+            setUser(res);
             if( user === false){
                 window.location.href = "/login"
             } 
         })
-        
-        /* if(!user || Object.keys(user).length === 0){
-            window.location.href = "/login"
-        }  */
     }, [])
 
     return (
@@ -29,7 +23,7 @@ const Organization = (props) => {
         
         <div className='page'>
             <h1 className='page-title'></h1>
-        {   user.typeofuser === "Organization" ?   <OrgPage user={user}/> : <UserPage user={user}/>    }
+        {   user.typeofuser === "Organization" ?   <OrgPage  user={user}/> : <UserPage user={user}/>    }
         
         </div>
     )

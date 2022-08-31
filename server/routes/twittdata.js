@@ -51,4 +51,24 @@ router.get('/typeOfOrganizations', async (req, res) => {
     })
 })
 
+router.post('/organization/tweets/addTweet', async (req, res) => {
+    console.log(req.body)
+    const { org_id, twittdata_id } = req.body
+    let sql = `INSERT INTO org_twittdatas (org_id, twittdata_id) VALUES (${org_id}, ${twittdata_id})`;
+    await db.query(sql, (err, result) => {
+        if(err) throw(err)
+        res.json(result)
+    })
+    
+})
+
+router.get('/organization/tweets/', async (req, res) => {
+    let sql = `SELECT * FROM org_twittdatas`;
+    console.log(req.query)
+    await db.query(sql, (err, result) => {
+        if(err) throw(err)
+        res.json(result)
+    })
+})
+
 module.exports = router

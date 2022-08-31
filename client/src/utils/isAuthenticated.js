@@ -1,6 +1,6 @@
 import jwt from 'jwt-decode' 
 
-export const checkAuth = async (token) => {
+export const isAuthenticated = async (token) => {
             if(!token) return false;
             const u = jwt(token)
             const toRet = await fetch('/api/users/' + u.id, 
@@ -12,7 +12,12 @@ export const checkAuth = async (token) => {
                 }
             })
             .then((res) => {return res.json()})
-            .then((data) => {if(data[0].id){return data[0]}else{localStorage.removeItem('token'); return false; }})
+            .then((data) => {console.log("checkAuthdata:", data); if(data[0].id){
+                                    return data[0]
+                                }else{
+                                    localStorage.removeItem('token'); 
+                                    return false; 
+                                }})
             
             return toRet
         }

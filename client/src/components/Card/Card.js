@@ -1,13 +1,21 @@
 import React  from 'react';
 import './Card.css'
 
-const Card = ({data}) => {
+const Card = ({data, isLogged, org}) => {
+
+  const addTweetToOrg = () => {
+    console.log(data)
+  } 
+  
+
 
   return (
     <div className="card">
               <div className='card-top'>
                 <a className="card-nickname" href={"https://twitter.com/anyuser/status/" + data.id} target="_blank"  rel="noopener noreferrer">@{data.nickname}</a> 
                 <div className="card-creation">{data.creation.slice(0,10)}</div>
+                { org.id && <input className='add-tweet-btn btn' type="button" value="+" onClick={addTweetToOrg} /> }
+
                 </div>
               <div className="card-body">
                 
@@ -32,7 +40,6 @@ const Card = ({data}) => {
                   </a>
                 </div> 
               }
-              
           </div>
   )
 }
