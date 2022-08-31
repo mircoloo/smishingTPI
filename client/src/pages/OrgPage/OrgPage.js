@@ -8,13 +8,26 @@ const OrgPage = (props) => {
     const [twittdata, setTwittdata] = useState([])
     const getTweets = (limit) => {
 
-      let data = {
-        skip: 0,
-        limit: limit,
-      }
-    fetch("/api/twittdata/?limit=" + limit)
+    fetch("/api/twittdata/organization/tweets/")
     .then(res => res.json() )
-    .then(data => { setTwittdata(data) }) 
+    .then(datas => datas.map((data) => {
+      const {org_id, twittdata_id} = data;
+      const body = {
+        org_id,
+        twittdata_id
+      }
+      .fetch("/api/twittdata/organization/tweets/getTweet", {
+          method: 'POST',
+          headers: {
+        'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(body),
+      })
+      .then(res => res.json())
+      .then((tweets) => { 
+        tweets.map((tweet) => console.log(tweet))
+      })    
+    }))  
 }
 
   useEffect(() => {

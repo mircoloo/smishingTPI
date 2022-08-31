@@ -4,7 +4,24 @@ import './Card.css'
 const Card = ({data, isLogged, org}) => {
 
   const addTweetToOrg = () => {
-    console.log(data)
+
+    const org_id = org.id;
+    const twittdata_id = data.id;
+
+    const data = {
+      org_id,
+      twittdata_id
+    }
+
+    fetch("/api/twittdata/organization/tweets/addTweet", {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+  })
+    .then((res) => res.json())
+    .then((data) => {console.log(data)})
   } 
   
 

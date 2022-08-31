@@ -50,15 +50,19 @@ router.get('/typeOfOrganizations', async (req, res) => {
         res.json(result)
     })
 })
-
 router.post('/organization/tweets/addTweet', async (req, res) => {
     console.log(req.body)
     const { org_id, twittdata_id } = req.body
-    let sql = `INSERT INTO org_twittdatas (org_id, twittdata_id) VALUES (${org_id}, ${twittdata_id})`;
-    await db.query(sql, (err, result) => {
-        if(err) throw(err)
-        res.json(result)
-    })
+    if( !org_id || !twittdata_id  ){
+        res.json({"error": "not valid parameters"})
+    }else{
+        let sql = `INSERT INTO org_twittdatas (org_id, twittdata_id) VALUES (${org_id}, ${twittdata_id})`;
+        await db.query(sql, (err, result) => {
+            if(err) throw(err)
+            res.json(result)
+        })
+    }
+    
     
 })
 
